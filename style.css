@@ -30,11 +30,11 @@ html, body {
 }
   
 .text-shadow-blue {
-    text-shadow: 0 5px 1.5px #0539FB;
+    text-shadow: 1px 5px 0 #0539FB;
 }
 
 .text-shadow-pink {
-    text-shadow: 0 5px 1.5px #FA1FF3;
+    text-shadow: 1px 5px 0 #FA1FF3;
 }
 
 .double-blue-border {

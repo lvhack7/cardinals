@@ -143,13 +143,13 @@
                             </p>
                             <div class="grid grid-cols-3 gap-[1px] mt-4">
                                 <div class="flex flex-col items-center justify-center py-8 px-6 outline">
-                                    <p class="font-bbn text-6xl lg:text-7xl">200</p>
+                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="200">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">БОЛЕЕ 200 
                                         СЧАСТЛИВЫХ 
                                         КЛИЕНТОВ</p>
                                 </div>
                                 <div class="flex flex-col items-center justify-center py-8 px-4 outline">
-                                    <p class="font-bbn text-6xl lg:text-7xl">2000</p>
+                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="2000">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
                                         БОЛЕЕ 2000 
                                         ИНТЕРЕСНЫХ 
@@ -157,7 +157,7 @@
                                     </p>
                                 </div>
                                 <div class="flex flex-col items-center justify-start py-8 px-4 outline">
-                                    <p class="font-bbn text-6xl lg:text-7xl">10000</p>
+                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="10000">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
                                         БОЛЕЕ 10000 
                                         ПУБЛИКАЦИЙ
@@ -443,6 +443,42 @@
             slidesPerView: 'auto', // number of slides per view
             spaceBetween: 10 // space between slides in pixels
         });
+
+        function isInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 200 &&
+                rect.left >= 200 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        window.addEventListener("scroll", function() {
+            if (isInViewport(counters[0])) {
+                counters.forEach((counter, id) => {
+                    const animate = () => {
+                        const value =+ counter.getAttribute('data-target');
+                        const data =+ counter.innerText;
+                        
+                        const time = value / speed - id * 2;
+                        if (data < value) {
+                            counter.innerText = Math.ceil(data + time);
+                            setTimeout(animate, 100);
+                        } else {
+                                counter.innerText = value;
+                            }
+                    }
+                    
+                    animate();
+                });
+            }
+        })
+        
+
     </script>
     <script src="/script.js" ></script>
 </body>
