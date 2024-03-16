@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="fixed bottom-[5%] right-[5%] z-20">
+        <div class="flex items-center justify-center pulse">
+            <img src="/assets/icons/whatsapp.svg" >
+        </div>
+    </div>
+    <header class="container mx-auto bg-white py-4 lg:py-6 px-4">
+        <nav class="flex items-center justify-between">
+            <a class="flex" href="./index.html">
+                <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
+                <img class="lg:hidden" src="/assets/icons/logo-small.svg" alt="logo" >
+            </a>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a href="./index.html#about" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">О НАС</a>
+                <a href="./index.html#services" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Услуги</a>
+                <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">партнеры</a>
+                <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">команда</a>
+                <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">кейсы</a>
+                <a href="./index.html#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Контакты</a>
+            </div>
+            <div class="flex items-center space-x-20 lg:space-x-4">
+                <div class="relative">
+                    <button id="lang" class="inline-flex items-center text-xl lg:text-base" type="button">RU 
+                        <img src="/assets/icons/expand-lang.svg" class="ml-1" >
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700">
+                        <ul class="text-sm text-gray-700">
+                            <li>
+                            <a href="#" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">KZ</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-b-lg">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <img src="/assets/icons/search.svg" width="35">
+                </div>
+                <div onclick="toggleMenu()" class="flex lg:hidden">
+                    <img src="/assets/icons/menu.svg" width="35">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed z-30 top-0 right-0 bg-white">
+        <div class="flex flex-col py-4 px-6 space-y-16">
+            <div class="flex items-center justify-between">
+                <img onclick="toggleMenu()" src="/assets/icons/close.svg" width="35" >
+                <img src="/assets/icons/search.svg" width="50" >
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <a class="font-medium text-2xl uppercase text-[#282828]">О НАС</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">Услуги</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">партнеры</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">команда</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">кейсы</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">Контакты</a>
+            </div>
+            <div class="flex justify-end mt-8">
+                <img src="/assets/icons/decorative-element.svg" >
+            </div>
+        </div>
+    </div>
+    <main class="flex flex-col space-y-12 mt-10 lg:mt-20">
+        <section class="container mx-auto px-4">
+            <div class="flex flex-col space-y-12">   
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <img src="/assets/icons/arrow-back.svg" class="w-[60px]">
+                    <span class="font-medium text-xl lg:text-2xl text-gray-800">Вернутся назад</span>
+                </div>
+                <div class="relative flex flex-col">
+                    <img src="/assets/icons/decorative-element.svg" class="md:hidden absolute top-0 -right-4" >
+                    <h2 class="font-medium font-bbn text-6xl lg:text-7xl">Xiaomi.<br class="lg:hidden"> Первая встреча</h2>
+                    <p class="font-[300] text-xl mt-5">Каждый миг прикосновения к прекрасному как искусство коммуникаций.</p>
+                    <img src="/assets/imgs/xiaomi.png" class="w-full mt-4" >
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2] pt-14 pb-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-start justify-between gap-6">
+                    <div class="flex">
+                        <h3 class="font-medium font-bbn text-6xl uppercase">задача</h3>
+                    </div>
+                    <p class="font-extralight text-2xl lg:max-w-[60%]">
+                        Перед нами стояла не простая задача, визуальное сопровождение выхода нового продукта линейки Xiaomi на Казахстанский рынок. По запросу Xiaomi нам предстояло разработать и произвести визуальную концепцию с сочными красками и яркимиэмоциями, которая бы привлекла внимание творческой и модной молодежи Казахстана.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto lg:py-20 px-4">
+            <div class="flex flex-wrap lg:flex-nowrap items-center justify-between gap-6">
+                <div class="flex flex-col items-center justify-center h-full space-y-3 w-full">
+                    <img src="/assets/imgs/xiaomi-person.png" width="40%">
+                    <p class="font-medium text-3xl">Галина Мершиева</p>
+                    <p class="font-[300] text-xl">Руководитель проекта</p>
+                </div>
+                <div class="flex flex-col lg:max-w-[60%]">
+                    <img src="/assets/icons/qoutes.svg" width="50">
+                    <p class="font-extralight text-2xl mt-4">С виду проект может показаться легким и простым, но воплощение процесса съемок это не так просто как кажется на первый взгляд. Но все же, это было хорошее время, которое приятно сейчас вспомнить. Ведь нашей команде приходилось полностью разрабатывать креативную концепцию, прописывать сценарий, общаться с блогерамии вести съёмочный процесс!</p>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2] py-10 lg:py-14">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-between gap-6">
+                    <div class="flex">
+                        <h3 class="font-medium font-bbn text-6xl uppercase">СТРАТЕГИЯ</h3>
+                    </div>
+                    <p class="font-extralight text-2xl lg:max-w-[60%]">
+                        Важным пунктом нашей стратегии являлась полная локализация нашего видео. Мы искали только локальных инфльюнсеров, режиссеров, операторов и всю художественную часть. И кажется результат превзошел наши ожидания.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="relative container mx-auto lg:py-10 px-4">
+            <div class="flex flex-wrap items-center justify-between gap-6">
+                <div class="flex">
+                    <h3 class="font-medium font-bbn text-6xl uppercase">Решение</h3>
+                </div>
+                <p class="font-extralight text-2xl lg:max-w-[60%]">
+                    Для реализации этого проекта, нашим агентством была разработана креативная стратегия, разработка сценария и его последующее воплощение. В качестве режиссера был привлечен талантливый Алдияр Байкаримов. А креативное решение подготовилакоманда GreyCardinals.
+                </p>
+            </div>
+            <img class="absolute top-0 right-0 lg:static lg:mt-12 lg:ml-24" src="/assets/icons/decorative-element-1.svg" >
+            <iframe class="w-[100%] h-[250px] lg:h-[800px] mt-10 lg:mt-20" src="https://www.youtube.com/embed/g3HDOZP9BVY?si=SHhgQLTTPYQ_Lhto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer id="contacts" class="bg-black mt-20 lg:mt-44">
+        <div class="flex flex-col ">
+            <div class="border-b-2 border-white">
+                <div class="container mx-auto">
+                    <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
+                        <div class="flex h-full">
+                            <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
+                                презентация
+                            </div>
+                        </div>
+                        <div class="flex h-full">
+                            <div class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                                <img src="/assets/icons/arrow-up.svg" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-between">
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            презентация
+                        </div>
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            Будьте в курсе наших новостей:
+                        </div>
+                        <div class="flex h-full">
+                            <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                            </a>
+                            <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
+                                <img src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                            </a>
+                            <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+                <a href="/ru/index.html">
+                    <img src="/assets/icons/logo-white.svg" >
+                </a>
+                <p class="text-white font-light text-lg">
+                    КОНТАКТЫ:
+                    <br>
+                    Республика Казахстан, 050000, г.Алматы,
+                    <br>
+                    пр. Аль Фараби 15, БЦ «Нурлы Тау»,
+                    <br>
+                    Блок 4В, офис 1803.
+                    <br>
+                    Т: +7-727-311-56-63
+                    <br>
+                    hello@greycardinals.org
+                </p>
+            </div>
+            <div class="lg:hidden p-4 border-t-2 border-b-2 border-white">
+                <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium">
+                    Будьте в курсе наших новостей:
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center space-x-8 px-8 mb-8">
+                <div class="py-5">
+                    <img src="/assets/icons/youtube.svg" >
+                </div>
+                <div class="py-5">
+                    <img src="/assets/icons/insta.svg" >
+                </div>
+                <div class="py-5">
+                    <img src="/assets/icons/facebook.svg">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

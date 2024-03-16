@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .swiper {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<body class="relative">
+    <div class="fixed bottom-[5%] right-[5%] z-20">
+        <div class="flex items-center justify-center pulse">
+            <img src="/assets/icons/whatsapp.svg" >
+        </div>
+    </div>
+    <header class="container mx-auto bg-white py-4 lg:py-6 px-4">
+        <nav class="flex items-center justify-between">
+            <a class="flex" href="./index.html">
+                <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
+                <img class="lg:hidden" src="/assets/icons/logo-small.svg" alt="logo" >
+            </a>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a href="./index.html#about" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">О НАС</a>
+                <a href="./index.html#services" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Услуги</a>
+                <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">партнеры</a>
+                <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">команда</a>
+                <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">кейсы</a>
+                <a href="./index.html#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Контакты</a>
+            </div>
+            <div class="flex items-center space-x-20 lg:space-x-4">
+                <div class="relative">
+                    <button id="lang" class="inline-flex items-center text-xl lg:text-base" type="button">RU 
+                        <img src="/assets/icons/expand-lang.svg" class="ml-1" >
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700">
+                        <ul class="text-sm text-gray-700">
+                            <li>
+                            <a href="#" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">KZ</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-b-lg">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <img src="/assets/icons/search.svg" width="35">
+                </div>
+                <div onclick="toggleMenu()" class="flex lg:hidden">
+                    <img src="/assets/icons/menu.svg" width="35">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed z-30 top-0 right-0 bg-white">
+        <div class="flex flex-col py-4 px-6 space-y-16">
+            <div class="flex items-center justify-between">
+                <img onclick="toggleMenu()" src="/assets/icons/close.svg" width="35" >
+                <img src="/assets/icons/search.svg" width="50" >
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <a class="font-medium text-2xl uppercase text-[#282828]">О НАС</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">Услуги</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">партнеры</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">команда</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">кейсы</a>
+                <a class="font-medium text-2xl uppercase text-[#282828]">Контакты</a>
+            </div>
+            <div class="flex justify-end mt-8">
+                <img src="/assets/icons/decorative-element.svg" >
+            </div>
+        </div>
+    </div>
+
+    <main class="flex flex-col space-y-12">
+        <section class="relative bg-hero py-20 lg:py-52">
+            <div class="glitch-overlay"></div>
+            <div class="flex flex-col items-center justify-center py-16">
+                <h1 class="text-center text-white text-3xl lg:text-4xl font-light max-w-[80%]">
+                    GREY CARDINALS — ЛИДИРУЮЩЕЕ КОММУНИКАЦИОННОЕ АГЕНТСТВО В КАЗАХСТАНЕ И ЦЕНТРАЛЬНОЙ АЗИИ.
+                </h1>
+                <button class="bg-gray-100 px-12 py-5 text-xl mt-52 lg:mt-10 border-b-4 border-[#0539FB] opacity-[0.68] hover:opacity-100 hover:bg-black hover:text-white">
+                    Связаться
+                </button>
+            </div>
+        </section>
+        <section class="container mx-auto py-8 lg:py-20 px-4">
+            <div class="flex flex-col space-y-10 lg:space-y-16">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-10 lg:gap-24">
+                    <div class="lg:col-span-3">
+                        <div class="flex flex-col">
+                            <h2 class="font-bbn text-black uppercase text-7xl lg:text-[100px] text-shadow-blue lg:tracking-wide">КЛЮЧ ОТ ВСЕХ РЕШЕНИЙ</h2>
+                            <p class="font-extralight text-xl lg:text-2xl text-[#282828]">Grey Cardinals имеют партнеров и региональных представителей в странах СНГ и Европы.</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <div class="flex lg:justify-center items-center h-full w-full hover:cursor-pointer">
+                            <img src="/assets/icons/arrow-cases.svg" class=" w-[70%] lg:w-full">
+                        </div>
+                    </div>
+                </div>
+                <div id="about" class="grid grid-cols-1 lg:grid-cols-5 lg:pt-20 gap-10 lg:border-t border-black">
+                    <div class="lg:col-span-3">
+                        <div class="hidden lg:grid grid-cols-2 gap-8">
+                            <img src="/assets/imgs/case1.png" class="object-cover w-full">
+                            <img src="/assets/imgs/case2.png" class="object-cover w-full">
+                        </div>
+                        <div class="lg:hidden swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/assets/imgs/case1-mob.png" class="object-cover w-full">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/assets/imgs/case2-mob.png" class="object-cover w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 relative">
+                        <img class="absolute top-6 lg:-top-12 right-0" width="40%" src="/assets/icons/decorative-element.svg" >
+                        <div class="flex flex-col justify-between h-full">
+                            <h3 class="text-shadow-blue text-7xl lg:text-8xl font-bbn">О НАС</h3>
+                            <p class="font-extralight text-xl lg:text-2xl mt-4">
+                                Наше PR-агентство всегда открыто для новых клиентов. Мы рады предложить нашу экспертизу, знания и креатив всем, кому это необходимо. Если у вас есть четкий бриф – отлично! Если его нет, то мы отправим вам шаблон, чтобы вы смогли описать ваши цели и задачи.
+                                <br><br>
+                                Предоставьте команде профессионалов возможность выполнять функции вашего PR -менеджера!
+                            </p>
+                            <div class="grid grid-cols-3 gap-[1px] mt-4">
+                                <div class="flex flex-col items-center justify-center py-8 px-6 outline">
+                                    <p class="font-bbn text-6xl lg:text-7xl">200</p>
+                                    <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">БОЛЕЕ 200 
+                                        СЧАСТЛИВЫХ 
+                                        КЛИЕНТОВ</p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center py-8 px-4 outline">
+                                    <p class="font-bbn text-6xl lg:text-7xl">2000</p>
+                                    <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
+                                        БОЛЕЕ 2000 
+                                        ИНТЕРЕСНЫХ 
+                                        ПРОЕКТОВ
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-start py-8 px-4 outline">
+                                    <p class="font-bbn text-6xl lg:text-7xl">10000</p>
+                                    <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
+                                        БОЛЕЕ 10000 
+                                        ПУБЛИКАЦИЙ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="bg-[#F2F2F2] pt-16">
+            <div class="container mx-auto px-4">
+                <div class="flex items-end justify-between">
+                    <div class="flex flex-col space-y-10 lg:space-y-16 pb-20">
+                        <div class="inline-flex items-center space-x-4">
+                            <h2 class="text-7xl lg:text-8xl font-bbn text-shadow-pink">ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
+                            <button class="hidden lg:flex -mt-4 bg-transparent px-12 py-5 double-blue-border text-xl hover:bg-black hover:text-white">
+                                Связаться
+                            </button>
+                        </div>
+                        <!-- <div class="lg:hidden grid grid-cols-2 gap-[1px]">
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/360.svg" width="70">
+                                <p class="font-medium text-2xl mt-2">PR 360</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/gr.svg" width="70">
+                                <p class="font-medium text-2xl mt-2">GR</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/production.svg" width="70">
+                                <p class="font-medium text-2xl mt-2">Production</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/media.svg" width="70">
+                                <p class="font-medium text-2xl mt-2">Media buying</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/digital.svg" width="70">
+                                <p class="font-medium text-2xl text-center mt-2">Digital поддержка:</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-center py-10 outline">
+                                <img src="/assets/icons/star.svg" width="70">
+                                <p class="font-medium text-2xl mt-2">Мероприятия 
+                                </p>
+                            </div>
+                        </div> -->
+                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-[1px] lg:gap-12" id="services-dropdown">
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/360.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">PR 360</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    Создаём правильный диалог между вами и вашей целевой аудиторией - полное PR-сопровождение, копирайтинг, стратегическое планирование, креатив, продвижение в СМИ, организация инфоповодов, аналитика и антикризисные коммуникации.
+                                </p>
+                            </div>
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/gr.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">GR</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    Выстраивание и поддержка отношений между бизнесом с государством, форсайт; информационно-аналитическое обеспечение GR-деятельности; организация работы с общественными организациями участие в социально -ориентированных проектах.
+                                </p>
+                            </div>
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/production.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Production</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    Мы создаем истории, которые нравятся не только нашим друзьям и родным. От первой строчки и до финального кадра. Сценарии, съемки, анимация, постпродакшн, аудио и видеопроизводство с любовью и профессионализмом.
+                                </p>
+                            </div>
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/media.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Media buying</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    Закупка рекламных площадок в СМИ для продвижения, в том числе республиканские и международные ТВ, газеты, радио, журналы, веб-сайты, мобильные приложения, медиасервисы over-the-top, наружная реклама и т.д
+                                </p>
+                            </div>
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/digital.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Digital поддержка:</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    SMM, influence marketing, digital-планирование, content marketing, mobile marketing, разработка и запуск вирусных кампаний, поисковая оптимизация (SEO), визуальные креативы, таргетирования реклама.
+                                </p>
+                            </div>
+                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                                <img src="/assets/icons/star.svg" width="70">
+                                <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Мероприятия</p>
+                                <p class="content hidden lg:block font-[300] text-sm lg:text-base">
+                                    Наша команда специализируется на организации событий различного формата – от корпоративных мероприятий до культурных фестивалей, обеспечивая полный спектр услуг "под ключ”.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:hidden flex justify-center">
+                            <button class="bg-transparent px-6 py-4 double-blue-border text-2xl hover:bg-black hover:text-white">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </div>
+                    <img class="hidden lg:flex max-w-[35%]" src="/assets/imgs/tel.png" >
+                </div>
+            </div>
+        </section>
+        <section class="relative container mx-auto py-6 lg:py-16 px-4">
+            <img class="hidden lg:block absolute top-2 left-[30%]" width="200" src="/assets/icons/decorative-element.svg" >
+            <div class="flex flex-col space-y-6 lg:space-y-12">
+                <h3 class="text-shadow-blue text-7xl text-8xl font-bbn">ШОУРИЛ</h3>
+                <iframe class="w-full h-[300px] lg:h-[900px]" src="https://www.youtube.com/embed/vdVPVhmh7XM?si=44dW5bDZx05YC97_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="relative">
+            <img src="/assets/icons/ellipse-pink.svg" class="hidden xl:block absolute top-[30%] -left-6" >
+            <div class="container mx-auto px-4">
+                <div class="border-[5px] border-black">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="flex flex-col space-y-12 px-6 lg:px-10 py-8">
+                            <div class="flex flex-col">
+                                <h2 class="text-8xl font-bbn text-shadow-pink uppercase">Оставить заявку</h2>
+                                <p class="font-extralight text-2xl">и мы свяжемся с Вами для уточнения деталей</p>
+                            </div>
+                            <form class="flex flex-col space-y-6 lg:space-y-10">
+                                <input
+                                    type="text"
+                                    class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
+                                    placeholder="Имя"
+                                />
+                                <input
+                                    type="tel"
+                                    class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
+                                    placeholder="Номер телефона"
+                                />
+                                <input
+                                    type="email"
+                                    class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
+                                    placeholder="Почта"
+                                />
+                                <div class="flex lg:justify-center">
+                                    <button class="bg-transparent px-12 lg:px-16 py-4 double-blue-border text-[#110E0A] text-2xl hover:bg-black hover:text-white">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex">
+                            <img src="/assets/imgs/form.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto py-8 lg:py-16 px-3">
+            <div class="flex flex-col space-y-12">
+                <div class="flex items-center space-x-12">
+                    <h2 class="text-8xl font-bbn text-shadow-blue uppercase">Наши кейсы</h2>
+                    <button class="hidden lg:flex mb-4 bg-transparent px-16 py-4 double-blue-border text-[#110E0A] text-xl hover:bg-black hover:text-white">
+                        Смотреть все
+                    </button>
+                    <img class="hidden lg:flex mt-4" width="200" src="/assets/icons/decorative-element.svg" >
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
+                    <div class="col-span-1 row-span-2">
+                        <img src="/assets/imgs/poco.png" class="w-full h-full object-cover" >
+                    </div>
+                    <div class="hidden lg:flex col-span-1 row-span-1">
+                        <img src="/assets/imgs/im.png" class="w-full h-full object-cover" >
+                    </div>
+                    <div class="hidden lg:flex col-span-1 row-span-1">
+                        <img src="/assets/imgs/avon.png" class="w-full h-full object-cover" >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <img src="/assets/icons/polygon.svg" class="hidden lg:block absolute -top-[20%] right-[5%]" >
+            <div class="container mx-auto px-4">
+                <div id="partners" class="flex flex-col">
+                    <h2 class="lg:text-center font-medium text-5xl">Надежные партнеры</h2>
+                    <p class="lg:text-center font-[300] text-lg lg:text-xl mt-6">GREY CARDINALS ИМЕЮТ ПАРТНЕРОВ И РЕГИОНАЛЬНЫХ ПРЕДСТАВИТЕЛЕЙ В СТРАНАХ СНГ И ЕВРОПЫ</p>
+                    <div class="flex items-center justify-between mt-10 overflow-x-auto space-x-6 h-full">
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                    </div>
+                </div>
+                <div class="flex flex-col mt-20">
+                    <h2 class="lg:text-center font-medium text-5xl">Более 200+ довольных клиентов</h2>
+                    <div class="flex items-center justify-between mt-10 overflow-x-auto space-x-6 h-full">
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts" class="bg-black mt-20 lg:mt-44">
+        <div class="flex flex-col ">
+            <div class="border-b-2 border-white">
+                <div class="container mx-auto">
+                    <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
+                        <div class="flex h-full">
+                            <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
+                                презентация
+                            </div>
+                        </div>
+                        <div class="flex h-full">
+                            <div class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                                <img src="/assets/icons/arrow-up.svg" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-between">
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            презентация
+                        </div>
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            Будьте в курсе наших новостей:
+                        </div>
+                        <div class="flex h-full">
+                            <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                            </a>
+                            <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
+                                <img src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                            </a>
+                            <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+                <a href="/ru/index.html">
+                    <img src="/assets/icons/logo-white.svg" >
+                </a>
+                <p class="text-white font-light text-lg">
+                    КОНТАКТЫ:
+                    <br>
+                    Республика Казахстан, 050000, г.Алматы,
+                    <br>
+                    пр. Аль Фараби 15, БЦ «Нурлы Тау»,
+                    <br>
+                    Блок 4В, офис 1803.
+                    <br>
+                    Т: +7-727-311-56-63
+                    <br>
+                    hello@greycardinals.org
+                </p>
+            </div>
+            <div class="lg:hidden p-4 border-t-2 border-b-2 border-white">
+                <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium">
+                    Будьте в курсе наших новостей:
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center space-x-8 px-8 mb-8">
+                <div class="py-5">
+                    <img src="/assets/icons/youtube.svg" >
+                </div>
+                <div class="py-5">
+                    <img src="/assets/icons/insta.svg" >
+                </div>
+                <div class="py-5">
+                    <img src="/assets/icons/facebook.svg">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000, // milliseconds between slides
+                disableOnInteraction: false // allow manual navigation while autoplay is active
+            },
+            speed: 500, // transition speed in milliseconds
+            grabCursor: true, // change cursor to grab while dragging
+            slidesPerView: 'auto', // number of slides per view
+            spaceBetween: 10 // space between slides in pixels
+        });
+    </script>
+    <script src="/script.js" ></script>
+</body>
+</html>
