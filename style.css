@@ -110,3 +110,21 @@ html, body {
         transform: scale(0.9);
     }
 }
+
+.image-container-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    animation: scrolling-animation 10s linear infinite;
+}
+
+@keyframes scrolling-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

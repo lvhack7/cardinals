@@ -335,22 +335,19 @@
                 <div id="partners" class="flex flex-col">
                     <h2 class="lg:text-center font-medium text-5xl">Надежные партнеры</h2>
                     <p class="lg:text-center font-[300] text-lg lg:text-xl mt-6">GREY CARDINALS ИМЕЮТ ПАРТНЕРОВ И РЕГИОНАЛЬНЫХ ПРЕДСТАВИТЕЛЕЙ В СТРАНАХ СНГ И ЕВРОПЫ</p>
-                    <div class="flex items-center justify-between mt-10 overflow-x-auto space-x-6 h-full">
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                    <div class="image-container-wrapper mt-10">
+                        <div id="partners-container" class="image-container flex items-center justify-between space-x-6">
+                        
+                        </div>
                     </div>
+                    
                 </div>
                 <div class="flex flex-col mt-20">
                     <h2 class="lg:text-center font-medium text-5xl">Более 200+ довольных клиентов</h2>
-                    <div class="flex items-center justify-between mt-10 overflow-x-auto space-x-6 h-full">
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
-                        <div class="text-6xl text-gray-300 font-medium">Logo</div>
+                    <div class="image-container-wrapper mt-10">
+                        <div id="clients-container" class="image-container flex items-center justify-between space-x-6">
+                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -478,6 +475,103 @@
             }
         })
         
+        // Function to create an image container with both grey and colored images
+        function createImageContainer(greySrc, coloredSrc) {
+            const container = document.createElement('div');
+            container.className = 'partner-item flex items-center justify-center min-w-[200px]';
+
+            const greyImage = document.createElement('img');
+            greyImage.className = 'grey block'
+            greyImage.src = greySrc;
+            greyImage.alt = 'Grey Image';
+
+            const coloredImage = document.createElement('img');
+            coloredImage.className = 'colored hidden';
+            coloredImage.src = coloredSrc;
+            coloredImage.alt = 'Colored Image';
+
+            container.appendChild(greyImage);
+            container.appendChild(coloredImage);
+
+            return container;
+        }
+
+        // Function to add image containers to a parent element
+        function addImageContainers(parentElement, greyImages, coloredImages) {
+            for (let i = 0; i < greyImages.length; i++) {
+                const greySrc = greyImages[i];
+                const coloredSrc = coloredImages[i];
+                const container = createImageContainer(greySrc, coloredSrc);
+                parentElement.appendChild(container);
+            }
+        }
+
+
+        // Define paths to your grey and colored image folders
+        const greyImageFolder = '/assets/icons/partners-grey/';
+        const coloredImageFolder = '/assets/icons/partners-color/';
+
+        // Sample arrays of image file names in your folders
+        const greyImages = [
+            'pepsico.svg',
+            'air-astana.svg',
+            'astra.svg',
+            'avon.svg',
+            'award.svg',
+            'indrive.svg',
+            'jac.svg',
+            'lg.svg',
+            'mcdonalds.svg',
+            'nutella.svg',
+            'olx.svg',
+            'poco.svg',
+            'samsung.svg',
+            'xiaomi.svg',
+            'yandex.svg'
+        ];
+
+        const coloredImages = [
+            'pepsico.svg',
+            'air-astana.svg',
+            'astra.svg',
+            'avon.svg',
+            'award.svg',
+            'indrive.svg',
+            'jac.svg',
+            'lg.svg',
+            'mcdonalds.svg',
+            'nutella.svg',
+            'olx.svg',
+            'poco.svg',
+            'samsung.svg',
+            'xiaomi.svg',
+            'yandex.svg'
+        ];
+
+        // Get the parent element where you want to append the image containers
+        const partnersElement = document.getElementById('partners-container');
+        const clientsElement = document.getElementById('clients-container')
+
+        // Add image containers to the parent element
+        addImageContainers(partnersElement, greyImages.slice(1, greyImages.length).map(image => greyImageFolder + image), coloredImages.slice(1, coloredImages.length).map(image => coloredImageFolder + image));
+        addImageContainers(clientsElement, greyImages.map(image => greyImageFolder + image), coloredImages.map(image => coloredImageFolder + image))
+
+        const imageContainers = document.querySelectorAll('.partner-item');
+
+        imageContainers.forEach(container => {
+            const greyImage = container.querySelector('.grey');
+            const coloredImage = container.querySelector('.colored');
+
+            container.addEventListener('mouseover', () => {
+                greyImage.style.display = 'none'
+                coloredImage.style.display = 'block';
+            });
+
+            container.addEventListener('mouseout', () => {
+                greyImage.style.display = 'block'
+                coloredImage.style.display = 'none';
+            });
+        });
 
     </script>
     <script src="/script.js" ></script>
