@@ -35,3 +35,24 @@ function closeServices(id, divs) {
         } 
     });
 }
+
+var menuItems = document.querySelectorAll('.mob-link');
+
+menuItems.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
+        toggleMenu()
+        var targetId = item.getAttribute('href').substring(1); // Get target id without #
+        var targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+function goBack() {
+    history.back();
+}

@@ -111,20 +111,12 @@ html, body {
     }
 }
 
-.image-container-wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-
 .image-container {
-    animation: scrolling-animation 10s linear infinite;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
-@keyframes scrolling-animation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.image-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
+

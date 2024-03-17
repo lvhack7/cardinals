@@ -16,7 +16,7 @@
             <img src="/assets/icons/whatsapp.svg" >
         </div>
     </div>
-    <header class="container mx-auto bg-white py-4 lg:py-6 px-4">
+    <header id="top" class="container mx-auto bg-white py-4 lg:py-6 px-4">
         <nav class="flex items-center justify-between">
             <a class="flex" href="./index.html">
                 <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
@@ -28,7 +28,7 @@
                 <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">партнеры</a>
                 <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">команда</a>
                 <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">кейсы</a>
-                <a href="./index.html#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Контакты</a>
+                <a href="#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Контакты</a>
             </div>
             <div class="flex items-center space-x-20 lg:space-x-4">
                 <div class="relative">
@@ -37,7 +37,7 @@
                     </button>
                     
                     <!-- Dropdown menu -->
-                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700">
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
                         <ul class="text-sm text-gray-700">
                             <li>
                             <a href="#" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">KZ</a>
@@ -64,12 +64,12 @@
                 <img src="/assets/icons/search.svg" width="50" >
             </div>
             <div class="flex flex-col justify-center items-center space-y-8">
-                <a class="font-medium text-2xl uppercase text-[#282828]">О НАС</a>
-                <a class="font-medium text-2xl uppercase text-[#282828]">Услуги</a>
-                <a class="font-medium text-2xl uppercase text-[#282828]">партнеры</a>
-                <a class="font-medium text-2xl uppercase text-[#282828]">команда</a>
-                <a class="font-medium text-2xl uppercase text-[#282828]">кейсы</a>
-                <a class="font-medium text-2xl uppercase text-[#282828]">Контакты</a>
+                <a href="./index.html#about" class="mob-link font-medium text-2xl uppercase text-[#282828]">О НАС</a>
+                <a href="./index.html#services" class="mob-link font-medium text-2xl uppercase text-[#282828]">Услуги</a>
+                <a href="./index.html#partners" class="mob-link font-medium text-2xl uppercase text-[#282828]">партнеры</a>
+                <a href="./team.html" class="font-medium text-2xl uppercase text-[#282828]">команда</a>
+                <a href="./cases.html" class="font-medium text-2xl uppercase text-[#282828]">кейсы</a>
+                <a href="#contacts" class="mob-link font-medium text-2xl uppercase text-[#282828]">Контакты</a>
             </div>
             <div class="flex justify-end mt-8">
                 <img src="/assets/icons/decorative-element.svg" >
@@ -79,7 +79,7 @@
     <main class="flex flex-col space-y-12 mt-10 lg:mt-20">
         <section class="container mx-auto px-4">
             <div class="flex flex-col space-y-12">   
-                <div class="flex items-center space-x-4 lg:space-x-6">
+                <div class="flex items-center space-x-4 lg:space-x-6 hover:cursor-pointer" onclick="goBack()">
                     <img src="/assets/icons/arrow-back.svg" class="w-[60px]">
                     <span class="font-medium text-xl lg:text-2xl text-gray-800">Вернутся назад</span>
                 </div>
@@ -152,9 +152,9 @@
                             </div>
                         </div>
                         <div class="flex h-full">
-                            <div class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                            <a href="#top" class="px-5 border-l-2 border-r-2 border-white h-full py-6">
                                 <img src="/assets/icons/arrow-up.svg" >
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="hidden lg:flex items-center justify-between">
@@ -214,5 +214,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="/script.js" ></script>
 </body>
 </html>
