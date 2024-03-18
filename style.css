@@ -152,4 +152,27 @@ html, body {
     }
 }
 
+.running-line-container {
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+}
+
+.running-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    white-space: nowrap;
+    animation: runLine 18s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes runLine {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 
