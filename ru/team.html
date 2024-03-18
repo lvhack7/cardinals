@@ -18,7 +18,7 @@
 <style>
     .swiper {
         width: 100%;
-        height: 650px;
+        height: 750px;
     }
 </style>
 <body>
@@ -27,7 +27,7 @@
             <img src="/assets/icons/whatsapp.svg" >
         </div>
     </div>
-    <header id="top" class="container mx-auto bg-white py-4 lg:py-6 px-4">
+    <header id="top" class="container-sm bg-white py-4 lg:py-6 px-4">
         <nav class="flex items-center justify-between">
             <a class="flex" href="./index.html">
                 <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
@@ -88,7 +88,7 @@
         </div>
     </div>
     <main class="flex flex-col space-y-16 mt-10 lg:mt-20">
-        <section class="container mx-auto flex flex-col px-4">
+        <section class="container-sm flex flex-col px-4">
             <h1 class="text-shadow-blue text-6xl lg:text-8xl font-medium font-bbn">ОСНОВАТЕЛИ АГЕНТСТВА</h1>
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 mt-8 lg:mt-16">
                 <div class="lg:col-span-2 lg:pr-10">
@@ -140,10 +140,10 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto">
-            <div class="flex flex-col space-y-8 lg:space-y-12">
-                <h1 class="text-shadow-blue text-6xl px-4 lg:text-8xl font-medium font-bbn uppercase">Команда</h1>
-                <div id="team" class="hidden lg:grid px-4 grid-cols-1 lg:grid-cols-3 gap-8">
+        <section>
+            <div class="container-sm flex flex-col space-y-8 lg:space-y-12">
+                <h1 class="text-shadow-blue text-6xl lg:text-8xl font-medium font-bbn uppercase">Команда</h1>
+                <div id="team" class="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-8">
                 </div>
                 <div class="lg:hidden swiper">
                     <div id="team-mob" class="swiper-wrapper">
@@ -156,7 +156,7 @@
     <footer id="contacts" class="bg-black mt-20 lg:mt-44">
         <div class="flex flex-col ">
             <div class="border-b-2 border-white">
-                <div class="container mx-auto">
+                <div class="container-sm">
                     <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
                         <div class="flex h-full">
                             <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
@@ -190,7 +190,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container mx-auto flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+            <div class="container-sm flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
                 <a href="/ru/index.html">
                     <img src="/assets/icons/logo-white.svg" >
                 </a>
@@ -238,7 +238,7 @@
             speed: 500, // transition speed in milliseconds
             grabCursor: true, // change cursor to grab while dragging
             slidesPerView: 'auto', // number of slides per view
-            spaceBetween: 0 // space between slides in pixels
+            spaceBetween: 10 // space between slides in pixels
         });
 
         const team = [

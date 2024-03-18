@@ -14,6 +14,8 @@
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <style>
     .swiper {
@@ -27,7 +29,7 @@
             <img src="/assets/icons/whatsapp.svg" >
         </div>
     </div>
-    <header id="top" class="container mx-auto bg-white py-4 lg:py-6 px-4">
+    <header id="top" class="container-sm bg-white py-4 lg:py-6 px-4">
         <nav class="flex items-center justify-between">
             <a class="flex" href="./index.html">
                 <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
@@ -90,9 +92,8 @@
 
     <main class="flex flex-col space-y-12">
         <section class="relative bg-hero py-20 lg:py-52">
-            <div class="glitch-overlay"></div>
-            <div class="flex flex-col items-center justify-center py-16">
-                <h1 class="text-center text-white text-3xl lg:text-4xl font-light max-w-[80%]">
+            <div class="container-sm flex flex-col items-center justify-center py-16">
+                <h1 class="text-center text-white text-3xl lg:text-4xl font-light max-w-[90%]">
                     GREY CARDINALS — ЛИДИРУЮЩЕЕ КОММУНИКАЦИОННОЕ АГЕНТСТВО В КАЗАХСТАНЕ И ЦЕНТРАЛЬНОЙ АЗИИ.
                 </h1>
                 <a href="#form" class="bg-gray-100 px-12 py-5 text-xl mt-52 lg:mt-10 border-b-4 border-[#0539FB] opacity-[0.68] hover:opacity-100 hover:bg-black hover:text-white">
@@ -100,16 +101,27 @@
                 </a>
             </div>
         </section>
-        <section class="container mx-auto py-8 lg:py-20 px-4">
+        <section class="container-sm py-8 lg:py-20 px-4">
             <div class="flex flex-col space-y-10 lg:space-y-16">
                 <a href="./cases.html" class="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-10 lg:gap-24">
                     <div class="lg:col-span-3">
                         <div class="flex flex-col">
-                            <h2 class="font-bbn text-black uppercase text-7xl lg:text-[100px] text-shadow-blue lg:tracking-wide">КЛЮЧ ОТ ВСЕХ РЕШЕНИЙ</h2>
-                            <p class="font-extralight text-xl lg:text-2xl text-[#282828]">Grey Cardinals имеют партнеров и региональных представителей в странах СНГ и Европы.</p>
+                            <h2 class="font-bbn text-black uppercase text-6xl lg:text-[90px] lg:tracking-wide">КЛЮЧ ОТ ВСЕХ РЕШЕНИЙ</h2>
+                            <p 
+                                data-aos="fade-right" 
+                                data-aos-duration="800" 
+                                data-aos-offset="100" 
+                                data-aos-delay="100"
+                                data-aos-once="true"
+                                class="font-extralight text-xl lg:text-2xl text-[#282828]">Grey Cardinals имеют партнеров и региональных представителей в странах СНГ и Европы.</p>
                         </div>
                     </div>
-                    <div class="lg:col-span-2">
+                    <div data-aos="fade-right" 
+                        data-aos-duration="1000" 
+                        data-aos-offset="200" 
+                        data-aos-delay="500" 
+                        data-aos-once="true"
+                        class="lg:col-span-2">
                         <div class="flex lg:justify-center items-center h-full w-full hover:cursor-pointer">
                             <img src="/assets/icons/arrow-cases.svg" class=" w-[70%] lg:w-full">
                         </div>
@@ -133,23 +145,35 @@
                         </div>
                     </div>
                     <div class="lg:col-span-2 relative">
-                        <img class="absolute top-6 lg:-top-12 right-0" width="40%" src="/assets/icons/decorative-element.svg" >
+                        <img
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="200" 
+                            data-aos-delay="100"
+                            data-aos-once="true"
+                            class="absolute top-6 lg:-top-12 right-0" width="40%" src="/assets/icons/decorative-element.svg" >
                         <div class="flex flex-col justify-between h-full">
-                            <h3 class="text-shadow-blue text-7xl lg:text-8xl font-bbn">О НАС</h3>
-                            <p class="font-extralight text-xl lg:text-2xl mt-4">
+                            <h3 class="text-shadow-blue text-6xl lg:text-8xl font-bbn">О НАС</h3>
+                            <p 
+                                data-aos="fade-right" 
+                                data-aos-duration="1000" 
+                                data-aos-offset="200" 
+                                data-aos-delay="500"
+                                data-aos-once="true"
+                                class="font-extralight text-xl mt-4">
                                 Наше PR-агентство всегда открыто для новых клиентов. Мы рады предложить нашу экспертизу, знания и креатив всем, кому это необходимо. Если у вас есть четкий бриф – отлично! Если его нет, то мы отправим вам шаблон, чтобы вы смогли описать ваши цели и задачи.
                                 <br><br>
                                 Предоставьте команде профессионалов возможность выполнять функции вашего PR -менеджера!
                             </p>
                             <div class="grid grid-cols-3 gap-[1px] mt-4">
                                 <div class="flex flex-col items-center justify-center py-8 px-6 outline">
-                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="200">0</p>
+                                    <p class="counter font-bbn text-5xl lg:text-6xl" data-target="200">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">БОЛЕЕ 200 
                                         СЧАСТЛИВЫХ 
                                         КЛИЕНТОВ</p>
                                 </div>
                                 <div class="flex flex-col items-center justify-center py-8 px-4 outline">
-                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="2000">0</p>
+                                    <p class="counter font-bbn text-5xl lg:text-6xl" data-target="2000">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
                                         БОЛЕЕ 2000 
                                         ИНТЕРЕСНЫХ 
@@ -157,7 +181,7 @@
                                     </p>
                                 </div>
                                 <div class="flex flex-col items-center justify-start py-8 px-4 outline">
-                                    <p class="counter font-bbn text-6xl lg:text-7xl" data-target="10000">0</p>
+                                    <p class="counter font-bbn text-5xl lg:text-6xl" data-target="10000">0</p>
                                     <p class="font-extralight text-xl lg:text-2xl text-center lowercase lg:mt-2">
                                         БОЛЕЕ 10000 
                                         ПУБЛИКАЦИЙ
@@ -170,11 +194,11 @@
             </div>
         </section>
         <section id="services" class="bg-[#F2F2F2] pt-16">
-            <div class="container mx-auto px-4">
+            <div class="container-sm px-4">
                 <div class="flex items-end justify-between">
                     <div class="flex flex-col space-y-10 lg:space-y-16 pb-20">
-                        <div class="inline-flex items-center space-x-4">
-                            <h2 class="text-7xl lg:text-8xl font-bbn text-shadow-pink">ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
+                        <div class="inline-flex items-center justify-between">
+                            <h2 class="text-6xl lg:text-[90px] font-bbn text-shadow-pink">ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
                             <a href="#form" class="hidden lg:flex -mt-4 bg-transparent px-12 py-5 double-blue-border text-xl hover:bg-black hover:text-white">
                                 Связаться
                             </a>
@@ -206,43 +230,80 @@
                                 </p>
                             </div>
                         </div> -->
-                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-[1px] lg:gap-12" id="services-dropdown">
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                        <div 
+                            class="grid grid-cols-2 lg:grid-cols-3 gap-[1px] lg:gap-12" id="services-dropdown">
+                            <div 
+                                data-aos="fade-right" 
+                                data-aos-duration="800" 
+                                data-aos-offset="100" 
+                                data-aos-delay="300"
+                                data-aos-once="true"
+                                class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/360.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">PR 360</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
                                     Создаём правильный диалог между вами и вашей целевой аудиторией - полное PR-сопровождение, копирайтинг, стратегическое планирование, креатив, продвижение в СМИ, организация инфоповодов, аналитика и антикризисные коммуникации.
                                 </p>
                             </div>
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                            <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="500"
+                            data-aos-once="true"
+                            class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/gr.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">GR</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
                                     Выстраивание и поддержка отношений между бизнесом с государством, форсайт; информационно-аналитическое обеспечение GR-деятельности; организация работы с общественными организациями участие в социально -ориентированных проектах.
                                 </p>
                             </div>
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                            <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="700"
+                            data-aos-once="true"
+                            class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/production.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Production</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
                                     Мы создаем истории, которые нравятся не только нашим друзьям и родным. От первой строчки и до финального кадра. Сценарии, съемки, анимация, постпродакшн, аудио и видеопроизводство с любовью и профессионализмом.
                                 </p>
                             </div>
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                            <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="900"
+                            data-aos-once="true"
+                            class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/media.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Media buying</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
                                     Закупка рекламных площадок в СМИ для продвижения, в том числе республиканские и международные ТВ, газеты, радио, журналы, веб-сайты, мобильные приложения, медиасервисы over-the-top, наружная реклама и т.д
                                 </p>
                             </div>
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                            <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="1100"
+                            data-aos-once="true"
+                            class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/digital.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Digital поддержка:</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
                                     SMM, influence marketing, digital-планирование, content marketing, mobile marketing, разработка и запуск вирусных кампаний, поисковая оптимизация (SEO), визуальные креативы, таргетирования реклама.
                                 </p>
                             </div>
-                            <div class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
+                            <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="1300"
+                            data-aos-once="true"
+                            class="flex flex-col justify-start items-center space-y-2 lg:space-y-3 py-10 px-2 lg:items-start lg:p-0 outline lg:outline-none">
                                 <img src="/assets/icons/star.svg" width="70">
                                 <p class="font-medium text-2xl lg:text-3xl text-center lg:text-left">Мероприятия</p>
                                 <p class="content hidden lg:block font-[300] text-sm lg:text-base">
@@ -260,35 +321,50 @@
                 </div>
             </div>
         </section>
-        <section class="relative container mx-auto py-6 lg:py-16 px-4">
+        <section class="relative py-6 lg:py-16">
             <img class="hidden lg:block absolute top-2 left-[30%]" width="200" src="/assets/icons/decorative-element.svg" >
-            <div class="flex flex-col space-y-6 lg:space-y-12">
-                <h3 class="text-shadow-blue text-7xl text-8xl font-bbn">ШОУРИЛ</h3>
-                <iframe class="w-full h-[300px] lg:h-[900px]" src="https://www.youtube.com/embed/vdVPVhmh7XM?si=44dW5bDZx05YC97_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="container-sm flex flex-col items-s space-y-6 lg:space-y-12">
+                <h3 class="text-shadow-blue text-6xl lg:text-7xl font-bbn">ШОУРИЛ</h3>
+                <iframe class="w-full h-[500px] lg:h-[900px]" src="https://www.youtube.com/embed/vdVPVhmh7XM?si=44dW5bDZx05YC97_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
         <section class="relative">
             <img src="/assets/icons/ellipse-pink.svg" class="hidden xl:block absolute top-[30%] -left-6" >
-            <div class="container mx-auto px-4">
+            <div class="container-sm px-4">
                 <div id="form" class="border-[5px] border-black">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8">
                         <div class="flex flex-col space-y-12 px-6 lg:px-10 py-8">
                             <div class="flex flex-col">
-                                <h2 class="text-8xl font-bbn text-shadow-pink uppercase">Оставить заявку</h2>
+                                <h2 class="text-7xl lg:text-8xl font-bbn text-shadow-pink uppercase">Оставить заявку</h2>
                                 <p class="font-extralight text-2xl">и мы свяжемся с Вами для уточнения деталей</p>
                             </div>
                             <form class="flex flex-col space-y-6 lg:space-y-10">
                                 <input
+                                    data-aos="fade-right" 
+                                    data-aos-duration="1000" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="300"
+                                    data-aos-once="true"
                                     type="text"
                                     class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
                                     placeholder="Имя"
                                 />
                                 <input
+                                    data-aos="fade-right" 
+                                    data-aos-duration="1000" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="500"
+                                    data-aos-once="true"
                                     type="tel"
                                     class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
                                     placeholder="Номер телефона"
                                 />
                                 <input
+                                    data-aos="fade-right" 
+                                    data-aos-duration="1000" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
                                     type="email"
                                     class="text-center text-xl border border-black px-4 py-6 text-[#939393] focus:text-black"
                                     placeholder="Почта"
@@ -307,23 +383,41 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto py-8 lg:py-16 px-3">
-            <div class="flex flex-col space-y-12">
+        <section class="container-sm py-8 lg:py-16 px-3">
+            <div class="flex flex-col space-y-6 lg:space-y-12">
                 <div class="flex items-center space-x-12">
-                    <h2 class="text-8xl font-bbn text-shadow-blue uppercase">Наши кейсы</h2>
+                    <h2 class="text-7xl lg:text-8xl font-bbn text-shadow-blue uppercase">Наши кейсы</h2>
                     <button class="hidden lg:flex mb-4 bg-transparent px-16 py-4 double-blue-border text-[#110E0A] text-xl hover:bg-black hover:text-white">
                         Смотреть все
                     </button>
                     <img class="hidden lg:flex mt-4" width="200" src="/assets/icons/decorative-element.svg" >
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4">
-                    <div class="col-span-1 row-span-2">
+                    <div
+                    data-aos="fade-right" 
+                    data-aos-duration="1000" 
+                    data-aos-offset="100" 
+                    data-aos-delay="300"
+                    data-aos-once="true"
+                    class="col-span-1 row-span-2">
                         <img src="/assets/imgs/poco.png" class="w-full h-full object-cover" >
                     </div>
-                    <div class="hidden lg:flex col-span-1 row-span-1">
+                    <div 
+                    data-aos="fade-left" 
+                    data-aos-duration="1000" 
+                    data-aos-offset="200" 
+                    data-aos-delay="500"
+                    data-aos-once="true"
+                    class="hidden lg:flex col-span-1 row-span-1">
                         <img src="/assets/imgs/im.png" class="w-full h-full object-cover" >
                     </div>
-                    <div class="hidden lg:flex col-span-1 row-span-1">
+                    <div
+                    data-aos="fade-left" 
+                                    data-aos-duration="1000" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
+                    class="hidden lg:flex col-span-1 row-span-1">
                         <img src="/assets/imgs/avon.png" class="w-full h-full object-cover" >
                     </div>
                 </div>
@@ -331,9 +425,9 @@
         </section>
         <section class="relative">
             <img src="/assets/icons/polygon.svg" class="hidden lg:block absolute -top-[20%] right-[5%]" >
-            <div class="container mx-auto px-4">
+            <div class="container-sm px-4">
                 <div id="partners" class="flex flex-col">
-                    <h2 class="lg:text-center font-medium text-5xl">Надежные партнеры</h2>
+                    <h2 class="lg:text-center font-medium text-4xl lg:text-5xl">Надежные партнеры</h2>
                     <p class="lg:text-center font-[300] text-lg lg:text-xl mt-6">GREY CARDINALS ИМЕЮТ ПАРТНЕРОВ И РЕГИОНАЛЬНЫХ ПРЕДСТАВИТЕЛЕЙ В СТРАНАХ СНГ И ЕВРОПЫ</p>
                     <div class="mt-10">
                         <div id="partners-container" class="image-container flex items-center justify-between space-x-6 overflow-x-auto">
@@ -343,7 +437,7 @@
                     
                 </div>
                 <div class="flex flex-col mt-20">
-                    <h2 class="lg:text-center font-medium text-5xl">Более 200+ довольных клиентов</h2>
+                    <h2 class="lg:text-center font-medium text-4xl lg:text-5xl">Более 200+ довольных клиентов</h2>
                     <div class="mt-10">
                         <div id="clients-container" class="image-container flex items-center justify-between space-x-6 overflow-x-auto">
                         
@@ -356,7 +450,7 @@
     <footer id="contacts" class="bg-black mt-20 lg:mt-44">
         <div class="flex flex-col ">
             <div class="border-b-2 border-white">
-                <div class="container mx-auto">
+                <div class="container-sm">
                     <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
                         <div class="flex h-full">
                             <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
@@ -378,19 +472,37 @@
                         </div>
                         <div class="flex h-full">
                             <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
-                                <img src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                                <img 
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="300"
+                                    data-aos-once="true"
+                                src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
                             </a>
                             <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
-                                <img src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="500"
+                                    data-aos-once="true"
+                                src="/assets/icons/insta.svg" height="100%" class="mt-3">
                             </a>
                             <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
-                                <img src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
+                                src="/assets/icons/facebook.svg" height="100%" class="mt-2">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container mx-auto flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+            <div class="container-sm flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
                 <a href="/ru/index.html">
                     <img src="/assets/icons/logo-white.svg" >
                 </a>
@@ -428,6 +540,8 @@
     </footer>
 
     <script>
+        AOS.init();
+
         var swiper = new Swiper('.swiper', {
             direction: 'horizontal',
             loop: true,
