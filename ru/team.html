@@ -14,6 +14,8 @@
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <style>
     .swiper {
@@ -95,7 +97,13 @@
                     <img src="/assets/imgs/founder1.png">
                 </div>
                 <div class="lg:col-span-3">
-                    <div class="flex flex-col justify-around h-full space-y-6">
+                    <div
+                    data-aos="fade-right" 
+                                data-aos-duration="1000" 
+                                data-aos-offset="100" 
+                                data-aos-delay="300"
+                                data-aos-once="true"
+                    class="flex flex-col justify-around h-full space-y-6">
                         <div class="flex flex-col">
                             <h2 class="font-bbn text-4xl lg:text-5xl font-medium">АЛЕКСАНДР КЕРИМОВ</h2>
                             <p class="font-extralight text-xl lg:text-2xl mt-3">УПРАВЛЯЮЩИЙ ПАРТНЕР</p>
@@ -117,7 +125,13 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-8 lg:mt-16">
                 <div class="order-2 lg:order-1 lg:col-span-3">
-                    <div class="flex flex-col justify-around h-full space-y-6">
+                    <div 
+                    data-aos="fade-left" 
+                                data-aos-duration="1000" 
+                                data-aos-offset="100" 
+                                data-aos-delay="700"
+                                data-aos-once="true"
+                    class="flex flex-col justify-around h-full space-y-6">
                         <div class="flex flex-col lg:items-end">
                             <h2 class="font-bbn text-4xl lg:text-5xl font-medium">ОЛЬГА КАЛЕНИЧУК</h2>
                             <p class="font-extralight text-xl lg:text-2xl mt-3">УПРАВЛЯЮЩИЙ ПАРТНЕР</p>
@@ -325,9 +339,16 @@
         }
 
         const teamDiv = document.getElementById("team")
+        let i = 0
         for (const item of team) {
             teamDiv.innerHTML += `
-            <div class="bg-[#F2F2F2] p-8">
+            <div 
+            data-aos="fade-right" 
+            data-aos-duration="1000" 
+            data-aos-offset="100" 
+            data-aos-delay="${300+i*200}"
+            data-aos-once="true"
+            class="bg-[#F2F2F2] p-8">
                 <div class="flex flex-col justify-center items-center space-y-5">
                     <img src="${item.img}" width="50%">
                     <div class="flex flex-col justify-center text-center">
@@ -340,6 +361,7 @@
                 </div>
             </div>
             `
+            i++
         }
     </script>
     <script src="/script.js" ></script>
