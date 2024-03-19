@@ -13,6 +13,7 @@ html, body {
     background-image: url("/assets/gif/bg-desktop.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 @media (max-width: 600px) {
