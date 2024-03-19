@@ -714,8 +714,6 @@
     </footer>
 
     <script>
-        AOS.init();
-
         var swiper = new Swiper('.swiper', {
             direction: 'horizontal',
             loop: true,
@@ -762,88 +760,7 @@
                 });
             }
         })
-        
-        // Function to create an image container with both grey and colored images
-        // function createImageContainer(greySrc, coloredSrc) {
-        //     const container = document.createElement('div');
-        //     container.className = 'partner-item flex items-center justify-center min-w-[150px] lg:min-w-[200px]';
-
-        //     const greyImage = document.createElement('img');
-        //     greyImage.className = 'grey block'
-        //     greyImage.src = greySrc;
-        //     greyImage.alt = 'Grey Image';
-
-        //     const coloredImage = document.createElement('img');
-        //     coloredImage.className = 'colored hidden';
-        //     coloredImage.src = coloredSrc;
-        //     coloredImage.alt = 'Colored Image';
-
-        //     container.appendChild(greyImage);
-        //     container.appendChild(coloredImage);
-
-        //     return container;
-        // }
-
-        // Function to add image containers to a parent element
-        // function addImageContainers(parentElement, greyImages, coloredImages) {
-        //     for (let i = 0; i < greyImages.length; i++) {
-        //         const greySrc = greyImages[i];
-        //         const coloredSrc = coloredImages[i];
-        //         const container = createImageContainer(greySrc, coloredSrc);
-        //         parentElement.appendChild(container);
-        //     }
-        // }
-
-
-        // // Define paths to your grey and colored image folders
-        // const greyImageFolder = '/assets/icons/partners-grey/';
-        // const coloredImageFolder = '/assets/icons/partners-color/';
-
-        // // Sample arrays of image file names in your folders
-        // const greyImages = [
-        //     'pepsico.svg',
-        //     'air-astana.svg',
-        //     'astra.svg',
-        //     'avon.svg',
-        //     'award.svg',
-        //     'indrive.svg',
-        //     'jac.svg',
-        //     'lg.svg',
-        //     'mcdonalds.svg',
-        //     'nutella.svg',
-        //     'olx.svg',
-        //     'poco.svg',
-        //     'samsung.svg',
-        //     'xiaomi.svg',
-        //     'yandex.svg'
-        // ];
-
-        // const coloredImages = [
-        //     'pepsico.svg',
-        //     'air-astana.svg',
-        //     'astra.svg',
-        //     'avon.svg',
-        //     'award.svg',
-        //     'indrive.svg',
-        //     'jac.svg',
-        //     'lg.svg',
-        //     'mcdonalds.svg',
-        //     'nutella.svg',
-        //     'olx.svg',
-        //     'poco.svg',
-        //     'samsung.svg',
-        //     'xiaomi.svg',
-        //     'yandex.svg'
-        // ];
-
-        // // Get the parent element where you want to append the image containers
-        // const partnersElement = document.getElementById('partners-container');
-        // const clientsElement = document.getElementById('clients-container')
-
-        // // Add image containers to the parent element
-        // addImageContainers(partnersElement, greyImages.slice(1, greyImages.length).map(image => greyImageFolder + image), coloredImages.slice(1, coloredImages.length).map(image => coloredImageFolder + image));
-        // addImageContainers(clientsElement, greyImages.map(image => greyImageFolder + image), coloredImages.map(image => coloredImageFolder + image))
-
+    
         const imageContainers = document.querySelectorAll('.partner-item');
 
         imageContainers.forEach(container => {

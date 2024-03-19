@@ -1,3 +1,5 @@
+AOS.init()
+
 const langDropdownBtn = document.getElementById("lang")
 langDropdownBtn.addEventListener("click", function() {
     const langDropdown = document.getElementById("lang-dropdown")

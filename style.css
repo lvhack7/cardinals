@@ -10,14 +10,14 @@ html, body {
 }
 
 .bg-hero {
-    background-image: url("/assets/imgs/bg-hero.png");
+    background-image: url("/assets/gif/bg-desktop.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 @media (max-width: 600px) {
     .bg-hero {
-        background-image: url("/assets/imgs/bg-hero-mob.png");
+        background-image: url("/assets/gif/bg-mob.gif");
     }
 }
 
