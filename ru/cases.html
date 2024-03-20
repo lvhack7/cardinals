@@ -11,7 +11,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+<style>
+    .swiper-slide {
+        width: 100%;
+        height: 300px;
+    }
+</style>
 <body class="flex flex-col h-[100vh]">
     <div class="fixed bottom-[5%] right-[5%] z-20">
         <div class="flex items-center justify-center pulse">
@@ -88,32 +99,48 @@
                 <div class="relative flex flex-col">
                     <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">E-Commerce</h2>
                     <div 
-                    class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
+                    class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
                         <div 
                         data-aos="fade-up" 
                         data-aos-duration="600" 
                         data-aos-delay="100"
                         data-aos-once="true"
                         class="col-span-3 row-span-2">
-                            <div class="bg-gray-300 w-full h-[300px] md:h-full"></div>
+                            <div class="bg-gray-300 w-full h-[600px]"></div>
                         </div>
-                        <a 
+                        <div
                         data-aos="fade-up" 
                         data-aos-duration="600" 
                         data-aos-delay="300"
                         data-aos-once="true"
                         href="./xiaomi.html" class="hidden md:block relative col-span-4 row-span-1">
-                            <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/xiaomi.png" >
-                            <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Первая встреча</div>
-                        </a>
+                        <div class="bg-gray-300 w-full h-full"></div>    
+                        </div>
                         <div 
                         data-aos="fade-up" 
                         data-aos-duration="600" 
                         data-aos-delay="500"
                         data-aos-once="true"
                         class="hidden lg:block relative col-span-4 row-span-1">
-                            <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/dala.png" >
-                            <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Dala</div>
+                        <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                    <div 
+                    data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                    class="lg:hidden swiper mt-5 w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,7 +150,7 @@
             <div class="container-sm relative flex flex-col">
                 <img src="/assets/icons/decorative-element.svg" class="hidden md:block absolute top-0 right-[20%]" >
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Tech and telecom</h2>
-                <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
+                <div class="hidden lg:grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
                     <div
                     data-aos="fade-up" 
                         data-aos-duration="600" 
@@ -131,7 +158,7 @@
                         data-aos-once="true"
                     class="relative col-span-3 row-span-2 pb-8 group hover:cursor-pointer">
                         <img src="/assets/imgs/tech-telecom/1.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-12 left-6 font-medium text-white text-3xl group-hover:visible">Samsung. Jet Bot</p>
+                        <p class="invisible bg-linear absolute bottom-8 left-0 p-4 font-medium text-white text-3xl group-hover:visible w-full">Samsung. Jet Bot</p>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -140,7 +167,7 @@
                         data-aos-once="true"
                     class="relative hidden md:block col-span-2 row-span-1 group hover:cursor-pointer">
                         <img src="/assets/imgs/tech-telecom/2.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-white text-3xl group-hover:visible">Xiaomi. <br>Первая встреча</p>
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl group-hover:visible w-full">Xiaomi. <br>Первая встреча</p>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -149,7 +176,7 @@
                         data-aos-once="true"
                     class="relative hidden md:block col-span-2 row-span-1 group hover:cursor-pointer">
                         <img src="/assets/imgs/tech-telecom/3.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-gray-100 text-3xl group-hover:visible">KIVI</p>
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl group-hover:visible w-full">KIVI</p>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -158,10 +185,10 @@
                         data-aos-once="true"
                     class="relative hidden md:block relative col-span-2 row-span-2 pb-8 group hover:cursor-pointer">
                         <img src="/assets/imgs/tech-telecom/4.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-12 left-5 font-medium text-gray-100 text-3xl group-hover:visible">Яндекс Алиса</p>
+                        <p class="invisible bg-linear absolute bottom-8 left-0 p-4 font-medium text-white text-3xl group-hover:visible w-full">Яндекс Алиса</p>
                     </div>
                 </div>
-                <div class="hidden md:grid grid-cols-7">
+                <div class="hidden lg:grid grid-cols-7">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
@@ -169,7 +196,7 @@
                         data-aos-once="true"
                     class="relative col-span-3 row-span-2 pr-4 group hover:cursor-pointer">
                         <img src="/assets/imgs/tech-telecom/5.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-12 left-5 font-medium text-gray-100 text-3xl group-hover:visible">Samsung. 
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl group-hover:visible w-full">Samsung. 
                             <br>Photoshooting Nauryz</p>
                     </div>
                     <div 
@@ -197,12 +224,45 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="300"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/tech-telecom/1.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl w-full">Samsung. Jet Bot</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/tech-telecom/2.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl w-full">Xiaomi. <br>Первая встреча</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/tech-telecom/3.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl w-full">KIVI</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/tech-telecom/4.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl w-full">Яндекс Алиса</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/tech-telecom/5.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 font-medium text-white text-3xl w-full">Samsung. 
+                                <br>Photoshooting Nauryz</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container-sm relative flex flex-col">
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Retail & FMCG</h2>
-                <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
+                <div class="hidden lg:grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
@@ -210,7 +270,7 @@
                         data-aos-once="true"
                     class="relative col-span-3 row-span-2 pb-8 group hover:cursor-pointer">
                         <img src="/assets/imgs/retail/1.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-12 left-5 font-medium text-gray-100 text-3xl group-hover:visible">Сәлем! IM</p>
+                        <p class="invisible bg-linear absolute bottom-8 left- p-4 font-medium text-gray-100 text-3xl group-hover:visible w-full">Сәлем! IM</p>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -234,7 +294,7 @@
                         data-aos-delay="500"
                         data-aos-once="true"
                     class="hidden md:block relative col-span-2 row-span-2 pb-8">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/phone.png" >
+                        <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
                 <div class="hidden md:grid grid-cols-7">
@@ -263,20 +323,48 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/retail/1.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-8 left- p-4 font-medium text-gray-100 text-3xl w-full">Сәлем! IM</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container-sm relative flex flex-col">
-                <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Farm and beauty</h2>
+                <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Pharm and beauty</h2>
                 <div 
-                class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
+                class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
                         data-aos-delay="200"
                         data-aos-once="true"
                     class="col-span-3 row-span-2">
-                        <div class="bg-gray-300 w-full h-[300px] md:h-full"></div>
+                        <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -285,7 +373,7 @@
                         data-aos-once="true"
                     class="relative hidden md:block relative col-span-4 row-span-1 group hover:cursor-pointer">
                         <img src="/assets/imgs/pharm/1.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-gray-100 text-3xl group-hover:visible">Novo Nordisk</p>
+                        <p class="invisible bg-linear absolute bottom-0 left-0 font-medium text-gray-100 text-3xl group-hover:visible w-full p-4">Novo Nordisk</p>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -296,12 +384,37 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/pharm/1.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 font-medium text-white w-full text-3xl p-4">Novo Nordisk</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container-sm relative flex flex-col">
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Auto PR</h2>
-                <div class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 grid-flow-col gap-8 mt-8">
+                <div class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 grid-flow-col gap-8 mt-8">
                     <div
                     class="col-span-3 row-span-2">
                         <div class="bg-gray-300 w-full h-[300px] md:h-[600px]"></div>
@@ -331,38 +444,75 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container-sm relative flex flex-col">
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">GR</h2>
                 <div 
-                    class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
+                    class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
                     <div 
                     data-aos="fade-up" 
                     data-aos-duration="600" 
                     data-aos-delay="100"
                     data-aos-once="true"
                     class="col-span-3 row-span-2">
-                        <div class="bg-gray-300 w-full h-[300px] md:h-full"></div>
+                        <div class="bg-gray-300 w-full h-[600px]"></div>
                     </div>
-                    <a 
+                    <div
                     data-aos="fade-up" 
                     data-aos-duration="600" 
                     data-aos-delay="300"
                     data-aos-once="true"
                     href="./xiaomi.html" class="hidden md:block relative col-span-4 row-span-1">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/xiaomi.png" >
-                        <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Первая встреча</div>
-                    </a>
+                        <div class="bg-gray-300 w-full h-full"></div>
+                    </div>
                     <div 
                     data-aos="fade-up" 
                     data-aos-duration="600" 
                     data-aos-delay="500"
                     data-aos-once="true"
                     class="hidden lg:block relative col-span-4 row-span-1">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/dala.png" >
-                        <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Dala</div>
+                        <div class="bg-gray-300 w-full h-full"></div>
+                    </div>
+                </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -370,15 +520,14 @@
         <section>
             <div class="container-sm relative flex flex-col">
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Real estate</h2>
-                <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
+                <div class="hidden lg:grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 mt-8 grid-flow-col gap-8">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
                         data-aos-delay="200"
                         data-aos-once="true"
                     class="relative col-span-3 row-span-2 pb-8 group hover:cursor-pointer">
-                        <img src="/assets/imgs/retail/1.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-12 left-5 font-medium text-gray-100 text-3xl group-hover:visible">Сәлем! IM</p>
+                        <div class="bg-gray-300 w-full h-[600px]"></div>
                     </div>
                     <div 
                     data-aos="fade-up" 
@@ -402,10 +551,10 @@
                         data-aos-delay="500"
                         data-aos-once="true"
                     class="hidden md:block relative col-span-2 row-span-2 pb-8">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/phone.png" >
+                        <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
-                <div class="hidden md:grid grid-cols-7">
+                <div class="hidden lg:grid grid-cols-7">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
@@ -431,12 +580,40 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="relative">
+            <img src="/assets/icons/ellipse-pink.svg" class="hidden lg:block absolute top-[40%] -left-4" >
             <div class="container-sm relative flex flex-col">
                 <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">International PR</h2>
-                <div class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 grid-flow-col gap-8 mt-8">
+                <div class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 grid-flow-col gap-8 mt-8">
                     <div 
                     data-aos="fade-up" 
                         data-aos-duration="600" 
@@ -444,7 +621,7 @@
                         data-aos-once="true"
                     class="relative col-span-3 row-span-2 group hover:cursor-pointer">
                         <img src="/assets/imgs/pr/1.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-gray-100 text-3xl group-hover:visible">
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl group-hover:visible">
                             Picnic by Partners<br>Elf bar
                         </p>
                     </div>
@@ -455,7 +632,7 @@
                         data-aos-once="true"
                     class="relative hidden md:block col-span-2 row-span-1 group hover:cursor-pointer">
                         <img src="/assets/imgs/pr/2.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-gray-100 text-3xl group-hover:visible">
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl group-hover:visible">
                             Newsky Award<br>премия
                         </p>
                     </div>
@@ -466,7 +643,7 @@
                         data-aos-once="true"
                     class="relative hidden md:block col-span-2 row-span-1 group hover:cursor-pointer">
                         <img src="/assets/imgs/pr/3.png" class="w-full h-full object-cover" >
-                        <p class="invisible absolute bottom-5 left-5 font-medium text-gray-100 text-3xl group-hover:visible">
+                        <p class="invisible bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl group-hover:visible">
                             World of Warships
                         </p>
                     </div>
@@ -479,38 +656,86 @@
                         <div class="bg-gray-300 w-full h-full"></div>
                     </div>
                 </div>
+                <div 
+                data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                class="lg:hidden swiper mt-5 w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/pr/1.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl">
+                                Picnic by Partners<br>Elf bar
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/pr/2.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl">
+                                Newsky Award<br>премия
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/assets/imgs/pr/3.png" class="w-full h-full object-cover" >
+                            <p class="bg-linear absolute bottom-0 left-0 p-4 w-full font-medium text-white text-3xl">
+                                World of Warships
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
             <div class="container-sm relative flex flex-col">
-                <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Finance</h2>
-                <div 
-                    class="grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
+                <div class="relative flex flex-col">
+                    <h2 class="font-medium font-bbn text-5xl lg:text-7xl uppercase">Finance</h2>
                     <div 
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="100"
-                    data-aos-once="true"
-                    class="col-span-3 row-span-2">
-                        <div class="bg-gray-300 w-full h-[300px] md:h-full"></div>
+                    class="hidden lg:grid grid-cols-1 md:grid-cols-7 grid-rows-2 gap-8 mt-8">
+                        <div 
+                        data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="100"
+                        data-aos-once="true"
+                        class="col-span-3 row-span-2">
+                            <div class="bg-gray-300 w-full h-[600px]"></div>
+                        </div>
+                        <div
+                        data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="300"
+                        data-aos-once="true"
+                        href="./xiaomi.html" class="hidden md:block relative col-span-4 row-span-1">
+                        <div class="bg-gray-300 w-full h-full"></div>    
+                        </div>
+                        <div 
+                        data-aos="fade-up" 
+                        data-aos-duration="600" 
+                        data-aos-delay="500"
+                        data-aos-once="true"
+                        class="hidden lg:block relative col-span-4 row-span-1">
+                        <div class="bg-gray-300 w-full h-full"></div>
+                        </div>
                     </div>
-                    <a 
-                    data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="300"
-                    data-aos-once="true"
-                    href="./xiaomi.html" class="hidden md:block relative col-span-4 row-span-1">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/xiaomi.png" >
-                        <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Первая встреча</div>
-                    </a>
                     <div 
                     data-aos="fade-up" 
-                    data-aos-duration="600" 
-                    data-aos-delay="500"
-                    data-aos-once="true"
-                    class="hidden lg:block relative col-span-4 row-span-1">
-                        <img class="object-cover w-full h-full" src="/assets/imgs/ecommerce/dala.png" >
-                        <div class="absolute bottom-4 left-4 text-2xl text-white">Xiaomi. Dala</div>
+                        data-aos-duration="600" 
+                        data-aos-delay="200"
+                        data-aos-once="true"
+                    class="lg:hidden swiper mt-5 w-full">
+                        <div class="swiper-wrapper w-full">
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-300 w-full h-full"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -592,6 +817,20 @@
         </div>
     </footer>
 
+    <script>
+        var swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 2000, // milliseconds between slides
+                disableOnInteraction: false // allow manual navigation while autoplay is active
+            },
+            speed: 500, // transition speed in milliseconds
+            grabCursor: true, // change cursor to grab while dragging
+            slidesPerView: 'auto', // number of slides per view
+            spaceBetween: 10 // space between slides in pixels
+        });
+    </script>
     <script src="/script.js" ></script>
 </body>
 </html>
