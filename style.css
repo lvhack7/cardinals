@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 html, body {
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
@@ -28,6 +30,10 @@ html, body {
 
 .font-bbn {
     font-family: "BBN", sans-serif;
+}
+
+.font-osd {
+    font-family: "Oswald", sans-serif;
 }
   
 .text-shadow-blue {
