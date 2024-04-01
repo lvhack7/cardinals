@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="fixed bottom-[5%] right-[5%] z-20">
+        <div class="flex items-center justify-center pulse">
+            <img src="/assets/icons/whatsapp.svg" >
+        </div>
+    </div>
+    <header id="top" class="container-sm bg-white py-4 lg:py-6 px-4">
+        <nav class="flex items-center justify-between">
+            <a class="flex" href="./index.html">
+                <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
+                <img class="lg:hidden" src="/assets/icons/logo-small.svg" alt="logo" >
+            </a>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a href="./index.html#about" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">ABOUT US</a>
+                <a href="./index.html#services" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">SERVICES</a>
+                <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">PARTNERS</a>
+                <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">TEAM</a>
+                <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">CASES</a>
+                <a href="#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">CONTACTS</a>
+            </div>
+            <div class="flex items-center space-x-20 lg:space-x-4">
+                <div class="relative">
+                    <button id="lang" class="inline-flex items-center text-xl lg:text-base" type="button">EN 
+                        <img src="/assets/icons/expand-lang.svg" class="ml-1" >
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
+                        <ul class="text-sm text-gray-700">
+                            <li>
+                            <a href="/ru/alisa.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">RU</a>
+                            </li>
+                            <li>
+                            <a href="/kz/alisa.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-b-lg">KZ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <img src="/assets/icons/search.svg" width="35">
+                </div>
+                <div onclick="toggleMenu()" class="flex lg:hidden">
+                    <img src="/assets/icons/menu.svg" width="35">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed z-30 top-0 right-0 bg-white">
+        <div class="flex flex-col py-4 px-6 space-y-16">
+            <div class="flex items-center justify-between">
+                <img onclick="toggleMenu()" src="/assets/icons/close.svg" width="35" >
+                <img src="/assets/icons/search.svg" width="50" >
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <a href="./index.html#about" class="mob-link font-medium text-2xl uppercase text-[#282828]">ABOUT US</a>
+                <a href="./index.html#services" class="mob-link font-medium text-2xl uppercase text-[#282828]">SERVICES</a>
+                <a href="./index.html#partners" class="mob-link font-medium text-2xl uppercase text-[#282828]">PARTNERS</a>
+                <a href="./team.html" class="font-medium text-2xl uppercase text-[#282828]">TEAM</a>
+                <a href="./cases.html" class="font-medium text-2xl uppercase text-[#282828]">CASES</a>
+                <a href="#contacts" class="mob-link font-medium text-2xl uppercase text-[#282828]">CONTACTS</a>
+            </div>
+            <div class="flex justify-end mt-8">
+                <img src="/assets/icons/decorative-element.svg" >
+            </div>
+        </div>
+    </div>
+    <main class="flex flex-col space-y-12 mt-10 lg:mt-20">
+        <section class="container-sm px-4">
+            <div class="flex flex-col space-y-12">   
+                <div class="flex items-center space-x-4 lg:space-x-6 hover:cursor-pointer" onclick="goBack()">
+                    <img src="/assets/icons/arrow-back.svg" class="w-[60px]">
+                    <span class="font-medium text-xl lg:text-2xl text-gray-800">Go Back</span>
+                </div>
+                <div class="relative flex flex-col">
+                    <h2 class="font-medium font-bbn text-5xl lg:text-7xl">Alice in<br class="lg:hidden"> Kazakh Language</h2>
+                    <p class="font-[300] text-xl mt-5">Alice has started understanding and speaking Kazakh. This is the first step towards developing a virtual assistant in the region.</p>
+                    <img 
+                        data-aos="fade-right" 
+                        data-aos-duration="1000" 
+                        data-aos-offset="200" 
+                        data-aos-delay="500" 
+                        data-aos-once="true"
+                        src="/assets/imgs/alisa.png" class="w-full mt-4" >
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-[#F2F2F2F2] pt-14 pb-20">
+            <img src="/assets/icons/decorative-element.svg" class="md:hidden absolute top-12 right-0" >
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Task</h3>
+                    </div>
+                    <div class="flex flex-col space-y-6 lg:col-span-3 lg:pr-8">
+                        <p class="font-light text-xl">
+                            <span class="font-medium">PR Campaign Objective:</span> Increase awareness among the population of Kazakhstan about the unique capabilities of Yandex Alice in Kazakh language, draw attention to the learning opportunities with the virtual assistant according to individual user preferences.
+                        </p>
+                        <ul class="flex flex-col space-y-2 list-disc px-4">
+                            <li 
+                                data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="100" 
+                                data-aos-delay="300" 
+                                data-aos-once="true"
+                                class="text-xl font-light">
+                                Attract attention of media, influencers, bloggers to the virtual assistant
+                            </li>
+                            <li 
+                            data-aos="fade-left" 
+                            data-aos-duration="800" 
+                            data-aos-offset="100" 
+                            data-aos-delay="500" 
+                            data-aos-once="true"
+                                class="text-xl font-light">
+                                Fill the information field in Kazakhstan with positive messages about Alice's new capabilities
+                            </li>
+                            <li 
+                            data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="100" 
+                                data-aos-delay="700" 
+                                data-aos-once="true"
+                            class="text-xl font-light">
+                                Develop communication and image strategy for Yandex Kazakhstan
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <img src="/assets/icons/polygon.svg" class="hidden lg:block absolute -bottom-24 -right-4" >
+            <div class="container-sm lg:py-20 px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <div 
+                        
+                        class="flex flex-col items-center justify-center">
+                            <img src="/assets/imgs/alisa-person.png" width="40%">
+                            <p class="font-medium text-3xl">Madina Musayeva</p>
+                            <p class="font-[300] text-xl">Project Manager</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 lg:pr-8">
+                        <div class="flex flex-col">
+                            <img src="/assets/icons/qoutes.svg" width="50">
+                            <p 
+                            data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="200" 
+                                data-aos-delay="500" 
+                                data-aos-once="true"
+                            class="font-light text-xl mt-4">
+                                Working on this project was an exciting and engaging experience for me. The entire process of development and implementation of ideas went so harmoniously that each stage turned into an exciting adventure. The project team demonstrated a high level of professionalism and enthusiasm, making the collaboration even more enjoyable. It is important to note that despite possible difficulties, the energy and team spirit were at the highest level, which positively affected the outcome. Working with such a talented and dedicated team was not only interesting but also inspiring.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-[#F2F2F2F2] pt-14 pb-20">
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Press Release</h3>
+                    </div>
+                    <div class="flex flex-col space-y-10 lg:col-span-3 lg:pr-8">
+                        <p class="text-xl font-[300]">
+                            Press release distribution covered top media outlets: 
+                        </p>
+                        <div class="flex items-center space-x-6 lg:space-x-12">
+                            <img src="/assets/imgs/cursive.png" class="w-[100px]">
+                            <img src="/assets/imgs/capital.png" class="w-[100px]">
+                            <img src="/assets/imgs/yandex.png" class="w-[100px]">
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-xl font-[300]">Press release supported by:</p>
+                            <div class="grid grid-cols-1 lg:grid-cols-4 items-start mt-4 gap-8">
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/1.png" width="170">
+                                    <p class="text-2xl font-medium">Aida Balayeva</p>
+                                    <p class="font-light">
+                                        Minister of Culture 
+                                        and Information 
+                                        of the Republic of Kazakhstan
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/2.png" width="170">
+                                    <p class="text-2xl font-medium">Bagdat Musin</p>
+                                    <p class="font-light">
+                                        Minister of Digital Development, 
+                                        Innovations, and Aerospace Industry 
+                                        of the Republic of Kazakhstan
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/3.png" width="170">
+                                    <p class="text-2xl font-medium">Sayasat Nurbek</p>
+                                    <p class="font-light">
+                                        Minister of Science and 
+                                        Higher Education
+                                        of the Republic of Kazakhstan
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/4.png" width="170">
+                                    <p class="text-2xl font-medium">Olzhas Zhanabek</p>
+                                    <p class="font-light">
+                                        Head of the Department 
+                                        of Digitalization of the city 
+                                        of Almaty
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="relative">
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Special Projects</h3>
+                        <img src="/assets/icons/decorative-element-1.svg" class="hidden lg:block mt-20 float-right mr-32 w-[170px]">
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col space-y-6">
+                        <p data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="500" data-aos-once="true" class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Special Project on Nurkz</span>
+                            <br>
+                            One of the key projects in support of launching Alice in Kazakh language was a special project on the Nur.kz platform in collaboration with popular influencer, chemistry teacher from Almaty, and participant of the "30 under 30" Forbes Kazakhstan rating - Ulan Usenov. 
+                            <br>
+                            Ulan visited the Yandex office, where he was greeted by Yandex Search manager - Saltanat Bolatbekova.
+                            <br>
+                            He shared with the editorial team how digital technologies are currently impacting children, how to protect children from unwanted content, and also shared his opinion on the future development of technologies in education.  
+                            <br>
+                            Additionally, he was able to test the voice assistant "Alice" in Kazakh language at the office. (<a href="https://special.nur.kz/yandex-technologies-for-school">source</a>)
+                        </p>
+                        <p data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="700" data-aos-once="true" class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Special Project on Tengrinews</span>
+                            <br>
+                            Yandex company employees shared details of creating services and digital solutions aimed at supporting Kazakhs in their efforts to study and develop their native language.  
+                            <br>
+                            For example, to implement the quick search feature, Yandex Kazakhstan processed Kazakh-language content using neural network technologies and machine learning methods. 
+                            <br>
+                            This experience is unique because no other search engine in the world provides quick answers in Kazakh language, considering that this language does not meet the criteria of most companies creating products in foreign languages. Additionally, most audio and text products and technologies are oriented towards popular languages. 
+                            <br>
+                            (<a href="https://tengrinews.kz/kazakhstan_news/kadrom-i-rabotaet-kazahskoyazyichnyim-kontentom-517017/">source</a>)
+                        </p>
+                        <p data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="900" data-aos-once="true" class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Special Project on TheVillage</span>
+                            <br>
+                            In the special project implemented jointly with The Village media, we learned about the life of a student at the journalism faculty. 
+                            <br><br>
+                            17-year-old student Samat Adilov was invited to participate in the special project. He told us about his choice of profession, university, shared about life and studies at the university. In addition, Samat talked about the technologies he uses during his studies and how they simplify his access to necessary information.
+                            <br>
+                            The use of artificial intelligence has become an integral part of a student's life. Moreover, the information needed for study must be in Kazakh language, and in this matter, Yandex helps him with the quick answer function in Kazakh language. (<a href="https://www.the-village-kz.com/village/people/specials/33199-yandex-students">source</a>)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2]">
+            <div class="container-sm px-4 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Radio and TV Broadcasts</h3>
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col space-y-6 lg:pr-12">
+                        <p class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Broadcast on radio 
+                                "Dacha Kazakhstan" and 
+                                radio "Zhuldyz FM"</span>
+                            <br>
+                            Coverage of an information event on two leading radio stations: Radio Dacha and Radio Zhuldyz. In addition to this, radio presenters had a conversation with Alice. They found out today's weather in Almaty, asked for a recipe for beshbarmak, clarified the height of Khan-Tengri peak, and asked Alice to tell a joke.      
+                        </p>
+                        <p class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">TV segment placement 
+                                on Eurasia Channel 1</span>
+                            <br>
+                            Journalists from the "First Channel Eurasia" visited the Yandex office. Saltanat Bolatbekova - Product Owner Yandex Search Kazakhstan talked about the launch of Alice in the mobile application in Kazakh language. Also, Nargiza Myrzabekova, a student at AlmaU University, Faculty of Journalism and Reporting, took part in the segment. Nargiza shared how she uses various technologies that help in her studies."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="lg:py-12">
+            <div class="container-sm">
+                <iframe class="w-full h-[400px] lg:h-[800px]" src="https://www.youtube.com/embed/oJnbRkJhthQ?si=qJzokFTl2-mOmoNt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2]">
+            <div class="container-sm px-4 py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Results<br>of PR Campaign </h3>
+                    </div>
+                    <div class="col-span-3 flex flex-col space-y-6">
+                        <p class="font-light text-xl lg:pr-12">
+                            One of the key indicators of PR effectiveness is the quantity and quality of media mentions.
+            The PR campaign for the launch of Alice was accompanied by extensive media coverage in various channels: television, radio, online platforms, social media, radio, etc.
+                        </p>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1px] mt-4">
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-6 outline">
+                                <p data-aos="fade-down" data-aos-duration="800" data-aos-offset="150" data-aos-delay="300" data-aos-once="true" class="font-mont font-bold text-6xl lg:text-7xl">100+</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    Over 100 organic press release publications
+                                </p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-6 outline">
+                                <p data-aos="fade-down" data-aos-duration="800" data-aos-offset="150" data-aos-delay="500" data-aos-once="true" class="font-mont font-bold text-6xl lg:text-7xl">10m</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    Total coverage of PR campaign 
+                                    exceeds 
+                                    10,000,000 
+                                </p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-4 outline">
+                                <p data-aos="fade-down" data-aos-duration="800" data-aos-offset="150" data-aos-delay="700" data-aos-once="true" class="font-mont font-bold text-5xl lg:text-6xl">140k</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    140 thousand queries 
+                                    to Alice in the Yandex app 
+                                    with Alice and browser 
+                                    in Kazakh language
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+    <footer id="contacts" class="bg-black mt-20 lg:mt-44">
+        <div class="flex flex-col ">
+            <div class="border-b-2 border-white">
+                <div class="container-sm">
+                    <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
+                        <div class="flex h-full">
+                            <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
+                                presentation
+                            </div>
+                        </div>
+                        <div class="flex h-full">
+                            <a href="#top" class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                                <img src="/assets/icons/arrow-up.svg" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-between">
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            presentation
+                        </div>
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            Stay up to date:
+                        </div>
+                        <div class="flex h-full">
+                            <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img 
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="300"
+                                    data-aos-once="true"
+                                src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                            </a>
+                            <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="500"
+                                    data-aos-once="true"
+                                src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                            </a>
+                            <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
+                                src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sm flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+                <a href="/ru/index.html">
+                    <img src="/assets/icons/logo-white.svg" >
+                </a>
+                <p class="text-white font-light text-lg">
+                    CONTACTS:
+                     <br>
+                     Republic of Kazakhstan, 050000, Almaty,
+                     <br>
+                     Al Farabi Ave. 15, BC “Nurly Tau”,
+                     <br>
+                     Block 4B, office 1803.
+                    <br>
+                    Phone: +7-727-311-56-63
+                    <br>
+                    hello@greycardinals.org
+                </p>
+            </div>
+            <div class="lg:hidden p-4 border-t-2 border-b-2 border-white">
+                <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium">
+                    Stay up to date:
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center space-x-8 px-8 mb-8">
+                <a href="https://www.youtube.com/@greycardinals8167" class="py-5">
+                    <img src="/assets/icons/youtube.svg" >
+                </a>
+                <a href="https://www.instagram.com/greycardinals/" class="py-5">
+                    <img src="/assets/icons/insta.svg" >
+                </a>
+                <a class="py-5">
+                    <img src="/assets/icons/facebook.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js" ></script>
+</body>
+</html>

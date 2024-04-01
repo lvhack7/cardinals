@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<style>
+    .swiper {
+        width: 100%;
+        height: 750px;
+    }
+</style>
+<body>
+    <div class="fixed bottom-[5%] right-[5%] z-20">
+        <div class="flex items-center justify-center pulse">
+            <img src="/assets/icons/whatsapp.svg" >
+        </div>
+    </div>
+    <header id="top" class="container-sm bg-white py-4 lg:py-6 px-4">
+        <nav class="flex items-center justify-between">
+            <a class="flex" href="./index.html">
+                <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
+                <img class="lg:hidden" src="/assets/icons/logo-small.svg" alt="logo" >
+            </a>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a href="./index.html#about" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">ABOUT US</a>
+                <a href="./index.html#services" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">SERVICES</a>
+                <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">PARTNERS</a>
+                <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">TEAM</a>
+                <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">CASES</a>
+                <a href="#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">CONTACTS</a>
+            </div>
+            <div class="flex items-center space-x-20 lg:space-x-4">
+                <div class="relative">
+                    <button id="lang" class="inline-flex items-center text-xl lg:text-base" type="button">EN 
+                        <img src="/assets/icons/expand-lang.svg" class="ml-1" >
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
+                        <ul class="text-sm text-gray-700">
+                            <li>
+                            <a href="/ru/team.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">RU</a>
+                            </li>
+                            <li>
+                            <a href="/kz/team.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-b-lg">KZ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <img src="/assets/icons/search.svg" width="35">
+                </div>
+                <div onclick="toggleMenu()" class="flex lg:hidden">
+                    <img src="/assets/icons/menu.svg" width="35">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed z-30 top-0 right-0 bg-white">
+        <div class="flex flex-col py-4 px-6 space-y-16">
+            <div class="flex items-center justify-between">
+                <img onclick="toggleMenu()" src="/assets/icons/close.svg" width="35" >
+                <img src="/assets/icons/search.svg" width="50" >
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <a href="./index.html#about" class="mob-link font-medium text-2xl uppercase text-[#282828]">ABOUT US</a>
+                <a href="./index.html#services" class="mob-link font-medium text-2xl uppercase text-[#282828]">SERVICES</a>
+                <a href="./index.html#partners" class="mob-link font-medium text-2xl uppercase text-[#282828]">PARTNERS</a>
+                <a href="./team.html" class="font-medium text-2xl uppercase text-[#282828]">TEAM</a>
+                <a href="./cases.html" class="font-medium text-2xl uppercase text-[#282828]">CASES</a>
+                <a href="#contacts" class="mob-link font-medium text-2xl uppercase text-[#282828]">CONTACTS</a>
+            </div>
+            <div class="flex justify-end mt-8">
+                <img src="/assets/icons/decorative-element.svg" >
+            </div>
+        </div>
+    </div>
+    <main class="flex flex-col space-y-16 mt-10 lg:mt-20">
+        <section class="container-sm flex flex-col px-4">
+            <h1 class="text-shadow-blue text-6xl lg:text-8xl font-medium font-bbn">Founders of the Agency</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 mt-8 lg:mt-16">
+                <div class="lg:col-span-2 lg:pr-10">
+                    <img src="/assets/imgs/founder1.png">
+                </div>
+                <div class="lg:col-span-3">
+                    <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="300" data-aos-once="true" class="flex flex-col justify-around h-full space-y-6">
+                        <div class="flex flex-col">
+                            <h2 class="font-bbn text-4xl lg:text-5xl font-medium">ALEXANDER KERIMOV</h2>
+                            <p class="font-extralight text-xl lg:text-2xl mt-3">MANAGING PARTNER</p>
+                        </div>
+                        <div class="flex flex-col space-y-4 lg:space-y-6">
+                            <p class="font-extralight text-xl lg:text-2xl">
+                                Alexander graduated from the University of International Business (UIB) in 2013 with a degree in Journalism and PR. Holds international certificates and diplomas in the field of PR.
+                            </p>
+                            <p class="font-extralight text-xl lg:text-2xl">
+                                Since 2008, he has been the founder of the DRIVE2.ru community in Kazakhstan. From 2011 to 2013, he worked as a journalist in automotive media and led the social direction of the Lafa.kz portal (later Motor.kz).
+                            </p>
+                            <p class="font-extralight text-xl lg:text-2xl">
+                                Worked in local and network PR agencies, has experience in SMM - worked in the finance, automotive, and IT sectors. Since August 2015, he has been a Managing Partner of the Grey Cardinals agency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-8 lg:mt-16">
+                <div class="order-2 lg:order-1 lg:col-span-3">
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-offset="100" data-aos-delay="700" data-aos-once="true" class="flex flex-col justify-around h-full space-y-6">
+                        <div class="flex flex-col lg:items-end">
+                            <h2 class="font-bbn text-4xl lg:text-5xl font-medium">OLGA KALENICHUK</h2>
+                            <p class="font-extralight text-xl lg:text-2xl mt-3">MANAGING PARTNER</p>
+                        </div>
+                        <div class="flex flex-col space-y-4 lg:space-y-6">
+                            <p class="font-extralight text-xl lg:text-2xl lg:text-right">
+                                In 2009, Olga graduated from KazEU named after Ryskulov with a degree in International Relations. In 2013, she completed her master's degree at the Austrian business school Lauder Business School.
+                            </p>
+                            <p class="font-extralight text-xl lg:text-2xl lg:text-right">
+                                She began her professional career in 2007 in the largest banks of Kazakhstan, in 2010 she headed the editorial office of the well-known magazine Advertising.
+                            </p>
+                            <p class="font-extralight text-xl lg:text-2xl lg:text-right">
+                                Since 2011, she has worked in Europe and Kazakhstan in network and local agencies with international clients, and in 2015, together with Alexander, they founded the Grey Cardinals agency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 lg:col-span-2 lg:pl-10">
+                    <img src="/assets/imgs/founder2.png">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-sm flex flex-col space-y-8 lg:space-y-12">
+                <h1 class="text-shadow-blue text-6xl lg:text-8xl font-medium font-bbn uppercase">Team</h1>
+                <div id="team" class="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-8">
+                </div>
+                <div class="lg:hidden swiper">
+                    <div id="team-mob" class="swiper-wrapper">
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+    <footer id="contacts" class="bg-black mt-20 lg:mt-44">
+        <div class="flex flex-col ">
+            <div class="border-b-2 border-white">
+                <div class="container-sm">
+                    <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
+                        <div class="flex h-full">
+                            <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
+                                presentation
+                            </div>
+                        </div>
+                        <div class="flex h-full">
+                            <a href="#top" class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                                <img src="/assets/icons/arrow-up.svg" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-between">
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            presentation
+                        </div>
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            Stay up to date:
+                        </div>
+                        <div class="flex h-full">
+                            <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img 
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="300"
+                                    data-aos-once="true"
+                                src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                            </a>
+                            <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="500"
+                                    data-aos-once="true"
+                                src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                            </a>
+                            <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
+                                src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sm flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+                <a href="/ru/index.html">
+                    <img src="/assets/icons/logo-white.svg" >
+                </a>
+                <p class="text-white font-light text-lg">
+                    CONTACTS:
+                     <br>
+                     Republic of Kazakhstan, 050000, Almaty,
+                     <br>
+                     Al Farabi Ave. 15, BC “Nurly Tau”,
+                     <br>
+                     Block 4B, office 1803.
+                    <br>
+                    Phone: +7-727-311-56-63
+                    <br>
+                    hello@greycardinals.org
+                </p>
+            </div>
+            <div class="lg:hidden p-4 border-t-2 border-b-2 border-white">
+                <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium">
+                    Stay up to date:
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center space-x-8 px-8 mb-8">
+                <a href="https://www.youtube.com/@greycardinals8167" class="py-5">
+                    <img src="/assets/icons/youtube.svg" >
+                </a>
+                <a href="https://www.instagram.com/greycardinals/" class="py-5">
+                    <img src="/assets/icons/insta.svg" >
+                </a>
+                <a class="py-5">
+                    <img src="/assets/icons/facebook.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000, // milliseconds between slides
+                disableOnInteraction: false // allow manual navigation while autoplay is active
+            },
+            speed: 500, // transition speed in milliseconds
+            grabCursor: true, // change cursor to grab while dragging
+            slidesPerView: 'auto', // number of slides per view
+            spaceBetween: 10 // space between slides in pixels
+        });
+
+        const team = [
+            {
+                img: "/assets/imgs/team/1.png",
+                name: "Yrys Amankeldy",
+                pos: "PR Director",
+                des: "Studied public relations in the UK. 6 years in PR communications. Yrys is a leading consultant in the field of PR and corporate communications in Kazakhstan. He has conducted more than 30 PR and informational campaigns for international and Kazakhstani organizations. Believes that the 'secret of success' of any business lies in successful communications."
+            },
+            {
+                img: "/assets/imgs/team/2.png",
+                name: "Marina Gritskevich",
+                pos: "New Business Director",
+                des: "A true multitasker and guru of multitasking. An analyst, strategist, director, creative producer, and DJ all in one. Studied directing in the USA, with experience working in a 'fancy agency' in New York. Cases for WV, TBC Bank, UN Woman, Samsung, and many other international companies."
+            },
+            {
+                img: "/assets/imgs/team/3.png",
+                name: "Madina Musayeva",
+                pos: "PR Director",
+                des: "PR director with European education in PR. Managed such brands as: 'Yandex Search', McDonald's, inDrive, Qatar Airways, Technodom, Xerox, OLX. Aimed at further expanding the agency's (and her own) portfolio with top clients and projects."
+            },
+            {
+                img: "/assets/imgs/team/4.png",
+                name: "Galina Mershiyeva",
+                pos: "Digital Director",
+                des: "A professional in digital marketing with 9 years of experience. Has extensive experience working with international companies. A real expert in optimizing advertising budgets and brand presence online."
+            },
+            {
+                img: "/assets/imgs/team/5.png",
+                name: "Monica",
+                pos: "Good girl",
+                des: "A professional through and through with two degrees in film and advertising. Worked with brands such as: Samsung, Nutella, Porsche, Mondelez, Levi's, BCC, Yandex. Loves her job, timely payment, and a decent fee."
+            },
+            {
+                img: "/assets/imgs/team/6.png",
+                name: "Ekaterina Kamalitdinova",
+                pos: "Art Director",
+                des: "A professional with over 10 years of experience in design. Worked with many major brands."
+            },
+            {
+                img: "/assets/imgs/team/7.png",
+                name: "Aruzhan Zhussupova",
+                pos: "Digital PR Manager",
+                des: "Digital PR manager. Has over 3 years of marketing experience. Content manager, specialist in social networks and trends. Clients: POCO Kazakhstan, Xiaomi Kazakhstan, Elfbar, PEPSICO."
+            },
+            {
+                img: "/assets/imgs/team/8.png",
+                name: "Ivan Smirnov",
+                pos: "PR Manager",
+                des: "Worked as a PR and SMM specialist, led a YouTube channel team. Experienced in commercial and non-commercial projects. Enjoys writing texts, doing analytics, and video content the most in work."
+            },
+            {
+                img: "/assets/imgs/team/9.png",
+                name: "Botagoz Ospanova",
+                pos: "Senior PR Manager",
+                des: "Senior PR manager with American education in film and media production, bachelor's degrees in journalism and political science. An expert in personal brand development, a generator of creative ideas, and a responsible gray cardinal."
+            },
+            {
+                img: "/assets/imgs/team/10.png",
+                name: "Daniya Abdrakhmanova",
+                pos: "PR Manager",
+                des: "PR manager with experience in media, startup projects, and the horeca industry. Loves to create creative advertising campaigns that capture hearts and remain memorable. Approaches problem-solving in a non-standard way and always achieves success."
+            },
+        ]
+
+
+        const teamMob = document.getElementById("team-mob")
+        for (const item of team) {
+            teamMob.innerHTML += `
+            <div class="swiper-slide">
+                <div class="bg-[#F2F2F2] p-8 h-full group">
+                    <div class="flex flex-col justify-center items-center space-y-5">
+                        <img src="${item.img}" class="group-hover:shadow-[5px_7px_0px_3px_#0539FB]" width="50%">
+                        <div class="flex flex-col justify-center text-center">
+                            <p class="font-medium text-4xl">${item.name}</p>
+                            <p class="font-extralight text-2xl">${item.pos}</p>
+                        </div>
+                        <p class="font-extralight text-xl">
+                            ${item.des}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+
+        const teamDiv = document.getElementById("team")
+        let i = 0
+        for (const item of team) {
+            teamDiv.innerHTML += `
+            <div 
+            data-aos="fade-right" 
+            data-aos-duration="1000" 
+            data-aos-offset="100" 
+            data-aos-delay="${300+i*200}"
+            data-aos-once="true"
+            class="bg-[#F2F2F2] p-8 group">
+                <div class="flex flex-col justify-center items-center space-y-5">
+                    <img src="${item.img}" class="group-hover:shadow-[5px_7px_0px_3px_#0539FB]" width="50%">
+                    <div class="flex flex-col justify-center text-center">
+                        <p class="font-medium text-4xl">${item.name}</p>
+                        <p class="font-extralight text-2xl">${item.pos}</p>
+                    </div>
+                    <p class="font-extralight text-xl">
+                        ${item.des}
+                    </p>
+                </div>
+            </div>
+            `
+            i++
+        }
+    </script>
+    <script src="/script.js" ></script>
+</body>
+</html>

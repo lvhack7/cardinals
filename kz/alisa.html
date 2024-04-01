@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="fixed bottom-[5%] right-[5%] z-20">
+        <div class="flex items-center justify-center pulse">
+            <img src="/assets/icons/whatsapp.svg" >
+        </div>
+    </div>
+    <header id="top" class="container-sm bg-white py-4 lg:py-6 px-4">
+        <nav class="flex items-center justify-between">
+            <a class="flex" href="./index.html">
+                <img class="hidden lg:flex" src="/assets/icons/logo.svg" alt="logo" >
+                <img class="lg:hidden" src="/assets/icons/logo-small.svg" alt="logo" >
+            </a>
+            <div class="hidden lg:flex items-center space-x-16">
+                <a href="./index.html#about" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">БІЗ ТУРАЛЫ</a>
+                <a href="./index.html#services" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Қызметтер</a>
+                <a href="./index.html#partners" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">серіктестер</a>
+                <a href="./team.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">команда</a>
+                <a href="./cases.html" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">кейстар</a>
+                <a href="#contacts" class="font-light text-lg uppercase text-[#282828] hover:cursor-pointer hover:text-[#0539FB]">Контактілер</a>
+            </div>
+            <div class="flex items-center space-x-20 lg:space-x-4">
+                <div class="relative">
+                    <button id="lang" class="inline-flex items-center text-xl lg:text-base" type="button">KZ 
+                        <img src="/assets/icons/expand-lang.svg" class="ml-1" >
+                    </button>
+                    
+                    <!-- Dropdown menu -->
+                    <div id="lang-dropdown" class="absolute top-8 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-28">
+                        <ul class="text-sm text-gray-700">
+                            <li>
+                            <a href="/ru/alisa.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-t-lg">RU</a>
+                            </li>
+                            <li>
+                            <a href="/en/alisa.html" class="block px-5 py-3 text-[17px] hover:bg-gray-100 rounded-b-lg">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <img src="/assets/icons/search.svg" width="35">
+                </div>
+                <div onclick="toggleMenu()" class="flex lg:hidden">
+                    <img src="/assets/icons/menu.svg" width="35">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed z-30 top-0 right-0 bg-white">
+        <div class="flex flex-col py-4 px-6 space-y-16">
+            <div class="flex items-center justify-between">
+                <img onclick="toggleMenu()" src="/assets/icons/close.svg" width="35" >
+                <img src="/assets/icons/search.svg" width="50" >
+            </div>
+            <div class="flex flex-col justify-center items-center space-y-8">
+                <a href="./index.html#about" class="mob-link font-medium text-2xl uppercase text-[#282828]">БІЗ ТУРАЛЫ</a>
+                <a href="./index.html#services" class="mob-link font-medium text-2xl uppercase text-[#282828]">Қызметтер</a>
+                <a href="./index.html#partners" class="mob-link font-medium text-2xl uppercase text-[#282828]">серіктестер</a>
+                <a href="./team.html" class="font-medium text-2xl uppercase text-[#282828]">команда</a>
+                <a href="./cases.html" class="font-medium text-2xl uppercase text-[#282828]">кейстар</a>
+                <a href="#contacts" class="mob-link font-medium text-2xl uppercase text-[#282828]">Контактілер</a>
+            </div>
+            <div class="flex justify-end mt-8">
+                <img src="/assets/icons/decorative-element.svg" >
+            </div>
+        </div>
+    </div>
+    <main class="flex flex-col space-y-12 mt-10 lg:mt-20">
+        <section class="container-sm px-4">
+            <div class="flex flex-col space-y-12">
+                <div class="flex items-center space-x-4 lg:space-x-6 hover:курсор-көрсеткіш" onclick="goBack()">
+                    <img src="/assets/icons/arrow-back.svg" class="w-[60px]">
+                    <span class="font-medium text-xl lg:text-2xl text-gray-800">Артқа қайту</span>
+                </div>
+                <div class="relative flex flex-col">
+                    <h2 class="font-medium font-bbn text-5xl lg:text-7xl">Алиса <br class="lg:hidden">Қазақ тілінде</h2>
+                    <p class="font-[300] text-xl mt-5">Алиса қазақша түсініп, сөйлей бастады. Бұл аймақтағы виртуалды көмекшілерді дамытудың алғашқы қадамы.</p>
+                    <img
+                        data-aos="fade-right"
+                        data-aos-duration = "1000"
+                        data-aos-offset="200"
+                        data-aos-delay = "500"
+                        data-aos-once="true"
+                        src="/assets/imgs/alisa.png" class="w-full mt-4" >
+                </div>
+            </div>
+        </section>
+        <section class="салыстырмалы Bg-[#F2F2F2F2] pt-14 pb-20">
+            <img src="/assets/icons/decorative-element.svg" class="md:hidden абсолюттік топ-12 оң жақ-0" >
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">тапсырма</h3>
+                    </div>
+                    <div class="flex flex-col space-y-6 lg:col-span-3 lg:pr-8">
+                        <p class="font-light text-xl">
+                            <span class="font-medium">PR-науқанның мақсаты:</span> Қазақстан тұрғындары арасында Яндекс Алисаның қазақ тіліндегі бірегей мүмкіндіктері туралы ақпараттандыруды арттыру, виртуалды көмекшімен оқыту мүмкіндіктеріне назар аудару. пайдаланушылардың жеке қалауына сәйкес.
+                        </p>
+                        <ul class="flex flex-col space-y-2 list-disc px-4">
+                            <li
+                                data-aos="fade-left"
+                                data-aos-ұзақтығы = "800"
+                                data-aos-offset="100"
+                                data-aos-delay = "300"
+                                data-aos-once="true"
+                                class="text-xl font-light">
+                                Бұқаралық ақпарат құралдарының, ықпал етушілердің, блогерлердің назарын виртуалды көмекшіге аудару
+                            </li>
+                            <li
+                            data-aos="fade-left"
+                            data-aos-duration = "800"
+                            data-aos-offset="100"
+                            data-aos-delay = "500"
+                            data-aos-once="true"
+                                class="text-xl font-light">
+                                Қазақстан Республикасындағы ақпараттық өрісті Алисаның жаңа мүмкіндіктері туралы жағымды хабарламалармен толтыру
+                            </li>
+                            <li
+                            data-aos="fade-left"
+                                data-aos-duration = "800"
+                                data-aos-offset="100"
+                                data-aos-delay = "700"
+                                data-aos-once="true"
+                            class="text-xl font-light">
+                                Яндекс Қазақстан үшін коммуникациялық және имидждік стратегияны әзірлеу
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <img src="/assets/icons/polygon.svg" class="hidden lg:block absolute -bottom-24 -right-4" >
+            <div class="container-sm lg:py-20 px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <div 
+                        
+                        class="flex flex-col items-center justify-center">
+                            <img src="/assets/imgs/alisa-person.png" width="40%">
+                            <p class="font-medium text-3xl">Мадина Мусаева</p>
+                            <p class="font-[300] text-xl">Жоба менеджері</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 lg:pr-8">
+                        <div class="flex flex-col">
+                            <img src="/assets/icons/qoutes.svg" width="50">
+                            <p 
+                            data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="200" 
+                                data-aos-delay="500" 
+                                data-aos-once="true"
+                            class="font-light text-xl mt-4">
+                            Бұл жобада жұмыс істеу мен үшін қызықты әрі қызықты тәжірибе болды. Идеяларды әзірлеу мен жүзеге асырудың бүкіл процесі үйлесімді өткені сонша, әрбір кезең қызықты шытырман оқиғаға айналды. Жоба командасы жоғары кәсібилік пен ынта-ықылас танытты, бұл ынтымақтастықты одан да қызықты етті. Мүмкін болатын қиындықтарға қарамастан, күш пен командалық рух жоғары деңгейде болды, бұл нәтижеге оң әсер етті. Осындай талантты және өз ісіне берілген командамен жұмыс істеу қызықты ғана емес, сонымен бірге шабыттандырды.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2] pt-14 pb-20">
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Пресс-релиз</h3>
+                    </div>
+                    <div class="flex flex-col space-y-10 lg:col-span-3 lg:pr-8">
+                        <p class="text-xl font-[300]">
+                            Баспасөз хабарламасы жетекші бұқаралық ақпарат құралдарына жіберілді:
+                        </p>
+                        <div class="flex items-center space-x-6 lg:space-x-12">
+                            <img src="/assets/imgs/cursive.png" class="w-[100px]">
+                            <img src="/assets/imgs/capital.png" class="w-[100px]">
+                            <img src="/assets/imgs/yandex.png" class="w-[100px]">
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-xl font-[300]">Пресс-релиз қолдады: </p>
+                            <div class="grid grid-cols-1 lg:grid-cols-4 items-start mt-4 gap-8">
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/1.png" width="170">
+                                    <p class="text-2xl font-medium">Аида Балаева</p>
+                                    <p class="font-light">
+                                        Мәдениет министрі
+                                         және ақпарат
+                                         Қазақстан Республикасы
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/2.png" width="170">
+                                    <p class="text-2xl font-medium">Багдат Мусин</p>
+                                    <p class="font-light">
+                                        Цифрлық даму министрі,
+                                         инновация және аэроғарыш
+                                         өнеркәсіп
+                                         Қазақстан Республикасы
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/3.png" width="170">
+                                    <p class="text-2xl font-medium">Саясат Нурбек</p>
+                                    <p class="font-light">
+                                        Ғылым министрі және
+                                         жоғары білім
+                                         Қазақстан Республикасы
+                                    </p>
+                                </div>
+                                <div class="flex flex-col items-center justify-center space-y-2 text-center">
+                                    <img src="/assets/imgs/press/4.png" width="170">
+                                    <p class="text-2xl font-medium">Олжас Жанабек</p>
+                                    <p class="font-light">
+                                        Бөлім бастығы
+                                         қаланы цифрландыру
+                                         Алматы
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative">
+            <div class="container-sm px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Арнайы жобалар</h3>
+                        <img src="/assets/icons/decorative-element-1.svg" class="hidden lg:block mt-20 float-right mr-32 w-[170px]" >
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col space-y-6">
+                        <p 
+                        data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="200" 
+                                data-aos-delay="500" 
+                                data-aos-once="true"
+                        class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Nurkz арнасында арнайы жоба</span>
+                            <br>
+                             Алисаның қазақ тілінде шығарылуын қолдауға арналған негізгі жобалардың бірі – танымал әсер етуші, алматылық химия мұғалімі және Forbes Kazakhstan журналының «30-ға дейінгі 30» қатысушысымен бірлесіп Nur.kz платформасында арнайы жоба. рейтингі – Ұлан Үсенов.
+                             <br>
+                             Ұлан Яндекс кеңсесінде болып, оны Яндекс іздеу менеджері Салтанат Болатбекова қарсы алды.
+                             <br>
+                             Ол редактормен цифрлық технологиялар қазір балаларға қалай әсер етіп жатқанын, балаларды қажетсіз контенттен қалай қорғауға болатынын айтып, білім берудегі технологияның болашақтағы дамуы туралы пікірімен бөлісті.
+                             <br>
+                             Сондай-ақ кеңседе ол «Алиса» дауыстық көмекшісін қазақ тілінде сынай алды. (https://special.nur.kz/yandex-technologies-for-school)
+                        </p>
+                        <p 
+                        data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="200" 
+                                data-aos-delay="700" 
+                                data-aos-once="true"
+                        class="text-lg lg:text-xl font-light">
+                        <span class="font-medium">Tengrinews арнасындағы арнайы жоба</span>
+                        <br>
+                        Яндекс қызметкерлері қазақстандықтардың ана тілін үйренуге және дамытуға деген ұмтылысын қолдауға бағытталған сервистер мен цифрлық шешімдерді құрудың егжей-тегжейлерімен бөлісті.
+                        <br>
+                        Мысалы, жылдам іздеу функциясын жүзеге асыру үшін Яндекс Қазақстан нейрожелі технологиялары мен машиналық оқыту әдістерін пайдалана отырып, қазақ тіліндегі контентті өңдеді.
+                        <br>
+                        Бұл тәжірибе бірегей, себебі әлемде ешбір іздеу жүйесі қазақ тілінде жылдам жауап бермейді, өйткені бұл тіл шетел тілінде өнім жасайтын компаниялардың көпшілігінің критерийлеріне сәйкес келмейді. Сондай-ақ, аудио және мәтіндік өнімдер мен технологиялардың көпшілігі танымал тілдерге бағытталған.
+                        <br>
+                        <span class="w-[320px] lg:w-full" style="word-wrap: break-word; display:inline-block;">(https://tengrinews.kz/kazakhstan_news/kadrom-i- rabotaet-kazahskoyazyichnyim-kontentom-517017/)<span/>
+                        </p>
+                        <p 
+                        data-aos="fade-left" 
+                                data-aos-duration="800" 
+                                data-aos-offset="200" 
+                                data-aos-delay="900" 
+                                data-aos-once="true"
+                        class="text-lg lg:text-xl font-light">
+                        <span class="font-medium">TheVillage-дегі арнайы жоба</span>
+                        <br>
+                        The Village медиасымен бірлесіп жүзеге асырған арнайы жобада журналистика факультетіндегі студенттің өмірі қалай өтетінін білдік.
+                        <br><br>
+                        Арнайы жобаға қатысуға 17 жасар студент Самат Әділов шақырылып, ол өзінің таңдаған мамандығы, университеті туралы айтып, университеттегі өмірі мен оқуының қалай жүріп жатқанымен бөлісті. Сонымен қатар Самат оқу барысында қандай технологияларды қолданатынын және оның қажетті ақпаратқа қол жеткізуін қалай жеңілдететінін түсіндірді.
+                        <br>
+                        Жасанды интеллектті пайдалану студент өмірінің ажырамас бөлігіне айналды. Оның үстіне оқуға қажетті ақпарат қазақ тілінде болуы керек, ал Яндекс оған бұл мәселеде қазақ тілінде сұраққа жылдам жауап беру функциясымен көмектеседі. (https://www.the-village-kz.com/village/people/specials/33199-yandex-students)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2]">
+            <div class="container-sm px-4 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="lg:col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Радио және<br>теледидардағы хабарлар</h3>
+                    </div>
+                    <div class="lg:col-span-3 flex flex-col space-y-6 lg:pr-12">
+                        <p class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Радиода хабар тарату
+                                «Дача Қазақстан» және
+                                радиосы «Жұлдыз FM»</span>
+                            <br>
+                            Жаңалықтарды екі жетекші радиостанцияда көрсету: Дача радиосы және Жұлдыз радиосы. Сонымен қатар, радио жүргізушілері Алисамен әңгімелесті. Бүгін Алматы қаласының ауа-райы қандай екенін біліп, беспармақтың рецептісін сұрап, Хан Тәңірі шыңы қандай биіктікте екенін біліп, Алисадан әзіл айтып беруін сұрадық.
+                        </p>
+                        <p class="text-lg lg:text-xl font-light">
+                            <span class="font-medium">Теледидар оқиғасын орналастыру
+                                Еуразия бірінші арнасында</span>
+                            <br>
+                            «Бірінші арна Еуразия» арнасының журналистері Яндекс.Салтанат кеңсесіне келді Болатбекова - Өнім иесі іздеу Яндекс Қазақстан қазақ тіліндегі мобильді қосымшада Алисаның іске қосылғаны туралы айтты. Әңгімеге студент Наргиза Мырзабекқызы да қатысты. Ол AlmaU университетінің журналистика және репортаж факультетінде оқиды. Наргиза оқуға көмектесу үшін әртүрлі технологияларды қалай қолданатынын айтты».
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lg:py-12">
+            <div class="container-sm">
+                <iframe class="w-full h-[400px] lg:h-[800px]" src="https://www.youtube.com/embed/oJnbRkJhthQ?si=qJzokFTl2-mOmoNt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="bg-[#F2F2F2F2]">
+            <div class="container-sm px-4 py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                    <div class="col-span-2">
+                        <h3 class="font-medium font-bbn text-6xl lg:text-7xl uppercase">Нәтижелер<br>PR науқаны</h3>
+                    </div>
+                    <div class="col-span-3 flex flex-col space-y-6">
+                        <p class="font-light text-xl lg:pr-12">
+                            PR тиімділігінің негізгі көрсеткіштерінің бірі БАҚ-тың саны мен сапасы болып табылады.
+     Алисаның іске қосылуына арналған PR-науқаны әртүрлі арналарда: теледидарда, радиода, онлайн платформаларда, әлеуметтік, радиода және т.
+                        </p>
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1px] mt-4">
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-6 outline">
+                                <p 
+                                data-aos="fade-down" 
+                                data-aos-duration="800" 
+                                data-aos-offset="150" 
+                                data-aos-delay="300" 
+                                data-aos-once="true"
+                                class="font-mont font-bold text-6xl lg:text-7xl">100+</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    100-ден астам органикалық пресс-релиз жарияланымдары
+                                </p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-6 outline">
+                                <p 
+                                data-aos="fade-down" 
+                                data-aos-duration="800" 
+                                data-aos-offset="150" 
+                                data-aos-delay="500" 
+                                data-aos-once="true"
+                                class="font-mont font-bold text-6xl lg:text-7xl">10млн</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    PR науқанының жалпы қамтылуы
+                                     Көбірек
+                                     10 000 000
+                                </p>
+                            </div>
+                            <div class="flex flex-col items-center justify-start py-8 px-12 lg:px-4 outline">
+                                <p 
+                                data-aos="fade-down" 
+                                data-aos-duration="800" 
+                                data-aos-offset="150" 
+                                data-aos-delay="700" 
+                                data-aos-once="true"
+                                class="font-mont font-bold text-5xl lg:text-6xl">140мың</p>
+                                <p class="font-extralight text-lg lg:text-xl text-center lg:mt-2">
+                                    140 мың сұраныс
+                                     Яндекс қолданбасындағы Алисаға
+                                     Алиса және браузер қазақ тілінде
+                                     тіл
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts" class="bg-black mt-20 lg:mt-44">
+        <div class="flex flex-col ">
+            <div class="border-b-2 border-white">
+                <div class="container-sm">
+                    <div class="lg:hidden flex items-center justify-center space-x-8 border-l-2 border-white ml-4">
+                        <div class="flex h-full">
+                            <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium h-full">
+                                презентация
+                            </div>
+                        </div>
+                        <div class="flex h-full">
+                            <a href="#top" class="px-5 border-l-2 border-r-2 border-white h-full py-6">
+                                <img src="/assets/icons/arrow-up.svg" >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-between">
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            презентация
+                        </div>
+                        <div class="text-shadow-blue font-bbn text-6xl uppercase text-white font-medium">
+                            Біздің жаңалықтар:
+                        </div>
+                        <div class="flex h-full">
+                            <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img 
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="300"
+                                    data-aos-once="true"
+                                src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
+                            </a>
+                            <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="500"
+                                    data-aos-once="true"
+                                src="/assets/icons/insta.svg" height="100%" class="mt-3">
+                            </a>
+                            <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
+                                <img
+                                data-aos="fade-down" 
+                                    data-aos-duration="800" 
+                                    data-aos-offset="200" 
+                                    data-aos-delay="700"
+                                    data-aos-once="true"
+                                src="/assets/icons/facebook.svg" height="100%" class="mt-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sm flex flex-wrap gap-10 items-start lg:space-x-32 py-12 px-4">
+                <a href="/ru/index.html">
+                    <img src="/assets/icons/logo-white.svg" >
+                </a>
+                <p class="text-white font-light text-lg">
+                    БАЙЛАНЫСТАР:
+                    <br>
+                    Қазақстан Республикасы, 050000, Алматы қ.
+                    <br>
+                    Әл-Фараби даңғылы, 15, б.з.б. «Нұрлы Тау»,
+                    <br>
+                    4В блогы, 1803 кеңсе.
+                    <br>
+                    Т: +7-727-311-56-63
+                    <br>
+                    hello@greycardinals.org
+                </p>
+            </div>
+            <div class="lg:hidden p-4 border-t-2 border-b-2 border-white">
+                <div class="text-shadow-blue font-bbn text-5xl uppercase text-white font-medium">
+                    Біздің жаңалықтар:
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center space-x-8 px-8 mb-8">
+                <a href="https://www.youtube.com/@greycardinals8167" class="py-5">
+                    <img src="/assets/icons/youtube.svg" >
+                </a>
+                <a href="https://www.instagram.com/greycardinals/" class="py-5">
+                    <img src="/assets/icons/insta.svg" >
+                </a>
+                <a class="py-5">
+                    <img src="/assets/icons/facebook.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js" ></script>
+</body>
+</html>
