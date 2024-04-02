@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/output.css" >
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -133,13 +133,15 @@
                             <img src="/assets/imgs/case1.png" class="object-cover w-full h-full">
                             <img src="/assets/imgs/case2.png" class="object-cover w-full h-full">
                         </div>
-                        <div class="lg:hidden swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="/assets/imgs/case1-mob.png" class="object-cover w-full">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="/assets/imgs/case2-mob.png" class="object-cover w-full">
+                        <div class="lg:hidden">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/imgs/case1-mob.png" class="object-cover w-full">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/imgs/case2-mob.png" class="object-cover w-full">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -647,29 +649,14 @@
                         <div class="flex h-full">
                             <a href="https://www.youtube.com/@greycardinals8167" target="_blank" class="px-8 border-l-2 border-r-2 border-white h-full py-8">
                                 <img 
-                                data-aos="fade-down" 
-                                    data-aos-duration="800" 
-                                    data-aos-offset="200" 
-                                    data-aos-delay="300"
-                                    data-aos-once="true"
                                 src="/assets/icons/youtube.svg" height="100%" class="mt-3" >
                             </a>
                             <a href="https://www.instagram.com/greycardinals/" target="_blank" class="px-8 border-white h-full py-8">
                                 <img
-                                data-aos="fade-down" 
-                                    data-aos-duration="800" 
-                                    data-aos-offset="200" 
-                                    data-aos-delay="500"
-                                    data-aos-once="true"
                                 src="/assets/icons/insta.svg" height="100%" class="mt-3">
                             </a>
                             <a class="px-8 border-l-2 border-r-2 border-white h-full py-8">
                                 <img
-                                data-aos="fade-down" 
-                                    data-aos-duration="800" 
-                                    data-aos-offset="200" 
-                                    data-aos-delay="700"
-                                    data-aos-once="true"
                                 src="/assets/icons/facebook.svg" height="100%" class="mt-2">
                             </a>
                         </div>
